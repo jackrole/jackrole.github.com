@@ -3,9 +3,14 @@ http://username.github.io/archive.html
 http://username.github.io/atom.xml
 http://username.github.io/categories.html
 http://username.github.io/index.html
+http://username.github.io/index%E5%89%AF%E6%9C%AC.html
 http://username.github.io/pages.html
 http://username.github.io/rss.xml
 http://username.github.io/sitemap.txt
 http://username.github.io/tags.html
 
-http://username.github.io/lessons/2011/12/29/jekyll-introduction
+http://username.github.io/art/2015/03/06/top10-conductor
+http://username.github.io/develop/2015/03/04/openedx-oauth2.0-api
+http://username.github.io/develop/2015/03/04/openedx-install-smarteredu
+http://username.github.io/develop/2015/03/04/ec2-python2.6-to-python2.7
+http://username.github.io/develop/2015/02/26/openedx-smtp-config

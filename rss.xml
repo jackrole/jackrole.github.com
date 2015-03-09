@@ -1,436 +1,451 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-        <title>Jekyll Bootstrap</title>
-        <description>Jekyll Bootstrap - Name Lastname</description>
+        <title>挑灯观星</title>
+        <description>挑灯观星 - Name Lastname</description>
         <link>http://username.github.io</link>
         <link>http://username.github.io</link>
-        <lastBuildDate>2015-03-09T18:27:33+08:00</lastBuildDate>
-        <pubDate>2015-03-09T18:27:33+08:00</pubDate>
+        <lastBuildDate>2015-03-10T00:03:33+08:00</lastBuildDate>
+        <pubDate>2015-03-10T00:03:33+08:00</pubDate>
         <ttl>1800</ttl>
 
 
         <item>
-                <title>Jekyll Introduction</title>
+                <title>当代世界十大指挥家 // 当代世界十大交响乐团</title>
                 <description>
-&lt;p&gt;This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
-Directly following the intro we’ll learn exactly &lt;em&gt;how&lt;/em&gt; Jekyll does what it does.&lt;/p&gt;
+&lt;h3 id=&quot;section&quot;&gt;当代世界十大指挥家&lt;/h3&gt;
 
-&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;1.阿尔图罗·托斯卡尼尼（Arturo Toscanini）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;what-is-jekyll&quot;&gt;What is Jekyll?&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;2.布鲁诺·瓦尔特（Bruno Walter）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Jekyll is a parsing engine bundled as a ruby gem used to build static websites from
-dynamic components such as templates, partials, liquid code, markdown, etc. Jekyll is known as “a simple, blog aware, static site generator”.&lt;/p&gt;
-
-&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
-
-&lt;p&gt;This website is created with Jekyll. &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Sites&quot;&gt;Other Jekyll websites&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;what-does-jekyll-do&quot;&gt;What does Jekyll Do?&lt;/h3&gt;
-
-&lt;p&gt;Jekyll is a ruby gem you install on your local system.
-Once there you can call &lt;code&gt;jekyll --server&lt;/code&gt; on a directory and provided that directory
-is setup in a way jekyll expects, it will do magic stuff like parse markdown/textile files,
-compute categories, tags, permalinks, and construct your pages from layout templates and partials.&lt;/p&gt;
-
-&lt;p&gt;Once parsed, Jekyll stores the result in a self-contained static &lt;code&gt;_site&lt;/code&gt; folder.
-The intention here is that you can serve all contents in this folder statically from a plain static web-server.&lt;/p&gt;
-
-&lt;p&gt;You can think of Jekyll as a normalish dynamic blog but rather than parsing content, templates, and tags
-on each request, Jekyll does this once &lt;em&gt;beforehand&lt;/em&gt; and caches the &lt;em&gt;entire website&lt;/em&gt; in a folder for serving statically.&lt;/p&gt;
-
-&lt;h3 id=&quot;jekyll-is-not-blogging-software&quot;&gt;Jekyll is Not Blogging Software&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Jekyll is a parsing engine.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Jekyll does not come with any content nor does it have any templates or design elements.
-This is a common source of confusion when getting started.
-Jekyll does not come with anything you actually use or see on your website - you have to make it.&lt;/p&gt;
-
-&lt;h3 id=&quot;why-should-i-care&quot;&gt;Why Should I Care?&lt;/h3&gt;
-
-&lt;p&gt;Jekyll is very minimalistic and very efficient.
-The most important thing to realize about Jekyll is that it creates a static representation of your website requiring only a static web-server.
-Traditional dynamic blogs like Wordpress require a database and server-side code.
-Heavily trafficked dynamic blogs must employ a caching layer that ultimately performs the same job Jekyll sets out to do; serve static content.&lt;/p&gt;
-
-&lt;p&gt;Therefore if you like to keep things simple and you prefer the command-line over an admin panel UI then give Jekyll a try.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;3.列奥波尔德·斯托科夫斯基（Leopold Stokowsky）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Developers like Jekyll because we can write content like we write code:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Ability to write content in markdown or textile in your favorite text-editor.&lt;/li&gt;
-  &lt;li&gt;Ability to write and preview your content via localhost.&lt;/li&gt;
-  &lt;li&gt;No internet connection required.&lt;/li&gt;
-  &lt;li&gt;Ability to publish via git.&lt;/li&gt;
-  &lt;li&gt;Ability to host your blog on a static web-server.&lt;/li&gt;
-  &lt;li&gt;Ability to host freely on GitHub Pages.&lt;/li&gt;
-  &lt;li&gt;No database required.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;how-jekyll-works&quot;&gt;How Jekyll Works&lt;/h1&gt;
-
-&lt;p&gt;The following is a complete but concise outline of exactly how Jekyll works.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;4.威尔海尔姆·富尔特温格勒（Wilhelm Furtwangler）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Be aware that core concepts are introduced in rapid succession without code examples.
-This information is not intended to specifically teach you how to do anything, rather it
-is intended to give you the &lt;em&gt;full picture&lt;/em&gt; relative to what is going on in Jekyll-world.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;5.尤金·奥曼蒂（Eugene Ormandy）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Learning these core concepts should help you avoid common frustrations and ultimately
-help you better understand the code examples contained throughout Jekyll-Bootstrap.&lt;/p&gt;
-
-&lt;h2 id=&quot;initial-setup&quot;&gt;Initial Setup&lt;/h2&gt;
-
-&lt;p&gt;After &lt;a href=&quot;/index.html#start-now&quot;&gt;installing jekyll&lt;/a&gt; you’ll need to format your website directory in a way jekyll expects.
-Jekyll-bootstrap conveniently provides the base directory format.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-jekyll-application-base-format&quot;&gt;The Jekyll Application Base Format&lt;/h3&gt;
-
-&lt;p&gt;Jekyll expects your website directory to be laid out like so:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;.
-|-- _config.yml
-|-- _includes
-|-- _layouts
-|   |-- default.html
-|   |-- post.html
-|-- _posts
-|   |-- 2011-10-25-open-source-is-good.markdown
-|   |-- 2011-04-26-hello-world.markdown
-|-- _site
-|-- index.html
-|-- assets
-    |-- css
-        |-- style.css
-    |-- javascripts
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;6.赫伯特·冯·卡拉扬（Herbert Von Karajan）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;_config.yml&lt;/strong&gt;
-  Stores configuration data.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;_includes&lt;/strong&gt;
-  This folder is for partial views.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;_layouts&lt;/strong&gt;
-  This folder is for the main templates your content will be inserted into.
-  You can have different layouts for different pages or page sections.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;_posts&lt;/strong&gt;
-  This folder contains your dynamic content/posts.
-  the naming format is required to be &lt;code&gt;@YEAR-MONTH-DATE-title.MARKUP@&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;_site&lt;/strong&gt;
-  This is where the generated site will be placed once Jekyll is done transforming it.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;assets&lt;/strong&gt;
-  This folder is not part of the standard jekyll structure.
-  The assets folder represents &lt;em&gt;any generic&lt;/em&gt; folder you happen to create in your root directory.
-  Directories and files not properly formatted for jekyll will be left untouched for you to serve normally.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(read more: &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Usage&quot;&gt;https://github.com/mojombo/jekyll/wiki/Usage&lt;/a&gt;)&lt;/p&gt;
-
-&lt;h3 id=&quot;jekyll-configuration&quot;&gt;Jekyll Configuration&lt;/h3&gt;
-
-&lt;p&gt;Jekyll supports various configuration options that are fully outlined here:
-(&lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Configuration&quot;&gt;https://github.com/mojombo/jekyll/wiki/Configuration&lt;/a&gt;)&lt;/p&gt;
-
-&lt;h2 id=&quot;content-in-jekyll&quot;&gt;Content in Jekyll&lt;/h2&gt;
-
-&lt;p&gt;Content in Jekyll is either a post or a page.
-These content “objects” get inserted into one or more templates to build the final output for its respective static-page.&lt;/p&gt;
-
-&lt;h3 id=&quot;posts-and-pages&quot;&gt;Posts and Pages&lt;/h3&gt;
-
-&lt;p&gt;Both posts and pages should be written in markdown, textile, or HTML and may also contain Liquid templating syntax.
-Both posts and pages can have meta-data assigned on a per-page basis such as title, url path, as well as arbitrary custom meta-data.&lt;/p&gt;
-
-&lt;h3 id=&quot;working-with-posts&quot;&gt;Working With Posts&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Creating a Post&lt;/strong&gt;
-Posts are created by properly formatting a file and placing it the &lt;code&gt;_posts&lt;/code&gt; folder.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Formatting&lt;/strong&gt;
-A post must have a valid filename in the form &lt;code&gt;YEAR-MONTH-DATE-title.MARKUP&lt;/code&gt; and be placed in the &lt;code&gt;_posts&lt;/code&gt; directory.
-If the data format is invalid Jekyll will not recognize the file as a post. The date and title are automatically parsed from the filename of the post file.
-Additionally, each file must have &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML Front-Matter&lt;/a&gt; prepended to its content.
-YAML Front-Matter is a valid YAML syntax specifying meta-data for the given file.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Order&lt;/strong&gt;
-Ordering is an important part of Jekyll but it is hard to specify a custom ordering strategy.
-Only reverse chronological and chronological ordering is supported in Jekyll.&lt;/p&gt;
-
-&lt;p&gt;Since the date is hard-coded into the filename format, to change the order, you must change the dates in the filenames.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tags&lt;/strong&gt;
-Posts can have tags associated with them as part of their meta-data.
-Tags may be placed on posts by providing them in the post’s YAML front matter.
-You have access to the post-specific tags in the templates. These tags also get added to the sitewide collection.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Categories&lt;/strong&gt;
-Posts may be categorized by providing one or more categories in the YAML front matter.
-Categories offer more significance over tags in that they can be reflected in the URL path to the given post.
-Note categories in Jekyll work in a specific way.
-If you define more than one category you are defining a category hierarchy “set”.
-Example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;---
-title :  Hello World
-categories : [lessons, beginner]
----
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This defines the category hierarchy “lessons/beginner”. Note this is &lt;em&gt;one category&lt;/em&gt; node in Jekyll.
-You won’t find “lessons” and “beginner” as two separate categories unless you define them elsewhere as singular categories.&lt;/p&gt;
-
-&lt;h3 id=&quot;working-with-pages&quot;&gt;Working With Pages&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Creating a Page&lt;/strong&gt;
-Pages are created by properly formatting a file and placing it anywhere in the root directory or subdirectories that do &lt;em&gt;not&lt;/em&gt; start with an underscore.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Formatting&lt;/strong&gt;
-In order to register as a Jekyll page the file must contain &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML Front-Matter&lt;/a&gt;.
-Registering a page means 1) that Jekyll will process the page and 2) that the page object will be available in the &lt;code&gt;site.pages&lt;/code&gt; array for inclusion into your templates.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;7.雷昂纳德·伯恩斯坦（Leonarel Bernstein）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Categories and Tags&lt;/strong&gt;
-Pages do not compute categories nor tags so defining them will have no effect.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;8.克劳迪奥·阿巴多（Claudio Abbado）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Sub-Directories&lt;/strong&gt;
-If pages are defined in sub-directories, the path to the page will be reflected in the url.
-Example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;.
-|-- people
-    |-- bob
-        |-- essay.html
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;9.小泽征尔（Seiji Qzawa）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;This page will be available at &lt;code&gt;http://yourdomain.com/people/bob/essay.html&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;10.祖宾·梅塔（Zubin Mehta）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Recommended Pages&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;section-1&quot;&gt;当代世界十大交响乐团&lt;/h3&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;index.html&lt;/strong&gt;
-You will always want to define the root index.html page as this will display on your root URL.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;404.html&lt;/strong&gt;
-Create a root 404.html page and GitHub Pages will serve it as your 404 response.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;sitemap.html&lt;/strong&gt;
-Generating a sitemap is good practice for SEO.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;about.html&lt;/strong&gt;
-A nice about page is easy to do and gives the human perspective to your website.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;1.德累斯顿国立交响乐团（德国）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;templates-in-jekyll&quot;&gt;Templates in Jekyll&lt;/h2&gt;
+&lt;p&gt;　　这是世界上最古老的交响乐团，成立于1548年。开始时只是室内乐队的小编制，后逐步扩大。该团在18世纪前以演奏意大利歌剧为主。从1817年开始，由著名作曲家韦伯担任指挥，进一步充实了乐队人员的编制。后又经著名音乐家瓦格纳和理查·施特劳斯的指挥排演，这样创造出了辉煌的历史。&lt;/p&gt;
 
-&lt;p&gt;Templates are used to contain a page’s or post’s content.
-All templates have access to a global site object variable: &lt;code&gt;site&lt;/code&gt; as well as a page object variable: &lt;code&gt;page&lt;/code&gt;.
-The site variable holds all accessible content and metadata relative to the site.
-The page variable holds accessible data for the given page or post being rendered at that point.&lt;/p&gt;
+&lt;p&gt;　　德累斯顿交响乐团最擅长歌剧演奏；在交响作品方面，拥有跟西欧乐团所不同的独特音响，而且声部平衡很好。该团所演奏的德奥古典音乐格调高雅、音响丰满，具有美妙的德国古老传统色彩。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Create a Template&lt;/strong&gt;
-Templates are created by properly formatting a file and placing it in the &lt;code&gt;_layouts&lt;/code&gt; directory.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;2.维也纳爱乐管弦乐团（奥地利）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Formatting&lt;/strong&gt;
-Templates should be coded in HTML and contain YAML Front Matter.
-All templates can contain Liquid code to work with your site’s data.&lt;/p&gt;
+&lt;p&gt;　　维也纳爱乐乐团的历史可以追溯至1842年，该团是世界闻名的音乐之都——维也纳的象征性乐团。从1860年起，这个乐团由团员自主经营，在德索夫指挥下举办定期音乐会。1870年，里希特担任该团指挥后，该团声誉渐起。而后，马勒、理查·施特劳斯、勃拉姆斯和布鲁克纳等著名作曲家或指挥家，都曾指挥该团演出。这个乐团不设常任指挥。第二次世界大战后，贝姆、卡拉扬、慕蒂、伯恩斯坦、马泽尔等当代著名指挥家都经常被邀为客串指挥。据统计，指挥这个乐团灌制过唱片的指挥家竟达36位之多。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Rending Page/Post Content in a Template&lt;/strong&gt;
-There is a special variable in all templates named : &lt;code&gt;content&lt;/code&gt;.
-The &lt;code&gt;content&lt;/code&gt; variable holds the page/post content including any sub-template content previously defined.
-Render the content variable wherever you want your main content to be injected into your template:&lt;/p&gt;
+&lt;p&gt;　　维也纳爱乐管弦乐团的演奏有一种独特的美感，多年来一直保持着鲜明的德奥音乐的传统风格，典雅而庄重，弦乐音色华丽优美。该团演奏的曲目比较保守，以传统的德奥作品为主。值得一提的是，这个乐团对于任何类型的指挥家都能作出灵敏的反应。有时，他们在严格的指挥家手下，白天举行定期演奏会，演奏布鲁克纳的交响乐作品，晚上却在意大利歌剧指挥家的手下，演奏意大利歌剧，足见该团的适应能力之强。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;...
-&amp;lt;body&amp;gt;
-  &amp;lt;div id=&quot;sidebar&quot;&amp;gt; ... &amp;lt;/div&amp;gt;
-  &amp;lt;div id=&quot;main&quot;&amp;gt;
-    &amp;#123;{content}&amp;#125;
-  &amp;lt;/div&amp;gt;
-&amp;lt;/body&amp;gt;
-...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;3.纽约爱乐管弦乐团（美国）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;sub-templates&quot;&gt;Sub-Templates&lt;/h3&gt;
+&lt;p&gt;　　这是美国最早的交响乐团，由希尔创立于1842年。1922年，门格尔贝格接任首席指挥后，该团的演奏水平飞速发展。1928年，该团跟纽约交响乐协会合并，形成今天的规模。曾在该团任职的指挥家的名单中，可以看到马勒和达姆罗许等人的名字。从1928年到1936年间，托斯卡尼尼就任音乐监督，该团进入了黄金时代。1958年，当代著名指挥家伯恩斯坦开始指挥该团，使该团进入了第二个黄金时代。从1978年起，印度著名指挥家祖宾·梅塔就任该团的音乐指导与指挥。&lt;/p&gt;
 
-&lt;p&gt;Sub-templates are exactly templates with the only difference being they
-define another “root” layout/template within their YAML Front Matter.
-This essentially means a template will render inside of another template.&lt;/p&gt;
+&lt;p&gt;　　纽约爱乐交响乐团共有团员106名，每年要演奏52周，其中有23周举办定期演奏会，演出场次大约为190次。该团是美国最古老的交响乐团，具有非凡的演奏水平，而且在历代著名指挥家统率下灌录了数量众多的唱片，其演奏成员中著名的演奏家比比皆是，不胜枚举。&lt;/p&gt;
 
-&lt;h3 id=&quot;includes&quot;&gt;Includes&lt;/h3&gt;
-&lt;p&gt;In Jekyll you can define include files by placing them in the &lt;code&gt;_includes&lt;/code&gt; folder.
-Includes are NOT templates, rather they are just code snippets that get included into templates.
-In this way, you can treat the code inside includes as if it was native to the parent template.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;4.波士顿交响乐团（美国）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Any valid template code may be used in includes.&lt;/p&gt;
+&lt;p&gt;　　波士顿交响乐团创立于1881年，由亨谢尔任指挥。该团从创立至1918年的历任指挥都是清一色的德国指挥家。1919年，法国作曲家拉波接任指挥。从1924年俄国著名指挥家库塞维兹基就任音乐监督后，波士顿交响乐团进入了黄金时代。1972年，乐团又进入小泽征尔时代，再度重振威风。&lt;/p&gt;
 
-&lt;h2 id=&quot;using-liquid-for-templating&quot;&gt;Using Liquid for Templating&lt;/h2&gt;
+&lt;p&gt;　　波士顿交响乐团是现今所有美国乐团中最具贵族气息的乐团。在美籍日本指挥家小泽征尔和英国指挥家戴维斯这两位著名人物的轮流指挥下，这个乐团灌录了无数张令人爱不释手的唱片杰作。该团的弦乐合奏具有特殊的感染力量，他们演奏的中国乐曲《二泉映月》（改编为弦乐合奏）深受中国观众的称赞。&lt;/p&gt;
 
-&lt;p&gt;Templating is perhaps the most confusing and frustrating part of Jekyll.
-This is mainly due to the fact that Jekyll templates must use the Liquid Templating Language.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;5.柏林爱乐管弦乐团（德国）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;what-is-liquid&quot;&gt;What is Liquid?&lt;/h3&gt;
+&lt;p&gt;　　柏林爱乐管弦乐团成立于1882年，著名指挥家尼基什曾任该团指挥达27年之久，他在任期间为乐团打下了牢固的基础，使之成为全世界首屈一指的交响乐团之一。1954年，福特万格勒担任该团指挥，此后乐团声誉更盛。1955年后由卡拉扬接任该团终身常任指挥，由此进入卡拉扬时代，此间该团的演奏活动和唱片录音更为频繁。在萨尔兹堡音乐节上，该团曾参与歌剧公演活动。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/Shopify/liquid&quot;&gt;Liquid&lt;/a&gt; is a secure templating language developed by &lt;a href=&quot;http://shopify.com&quot;&gt;Shopify&lt;/a&gt;.
-Liquid is designed for end-users to be able to execute logic within template files
-without imposing any security risk on the hosting server.&lt;/p&gt;
+&lt;p&gt;　　同欧洲许多传统的乐团相比，柏林爱乐管弦乐团的历史较短，但担任该团指挥职务的大多是最伟大的指挥家，这就使他们的演奏曲目无限扩大，合奏技能精彩绝伦，并具备了优异的反应能力，无论哪个指挥家统率该团，都能发挥其实力。可以这样说，柏林爱乐管弦乐团是当今世界上名符其实的各交响乐团之冠。&lt;/p&gt;
 
-&lt;p&gt;Jekyll uses Liquid to generate the post content within the final page layout structure and as the primary interface for working with
-your site and post/page data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;6.捷克爱乐管弦乐团（捷克）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;why-do-we-have-to-use-liquid&quot;&gt;Why Do We Have to Use Liquid?&lt;/h3&gt;
+&lt;p&gt;　　该团是在1894年以布拉格国民剧院管弦乐团为中心组建的，两年后在捷克著名作曲家德沃夏克指挥下第一次举行演奏会。该团起初隶属于布拉格国民剧院，到1901年才独立出来。1918年，著名指挥家陶利希担任该团的音乐监督后，该团才成为前捷克和斯洛伐克首屈一指的乐团。到1950年后的安杰尔时代，该团终于拥有了世界性的实力与声誉。&lt;/p&gt;
 
-&lt;p&gt;GitHub uses Jekyll to power &lt;a href=&quot;http://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.
-GitHub cannot afford to run arbitrary code on their servers so they lock developers down via Liquid.&lt;/p&gt;
+&lt;p&gt;　　捷克爱乐管弦乐团的演奏的曲目十分广泛。该团的弦乐部分特别优秀，有古雅的情调和捷克式的独特音响，尤其在演奏本民族的作品时情韵特别优美，其中以德沃夏克的音乐为其最高成就。&lt;/p&gt;
 
-&lt;h3 id=&quot;liquid-is-not-programmer-friendly&quot;&gt;Liquid is Not Programmer-Friendly.&lt;/h3&gt;
-
-&lt;p&gt;The short story is liquid is not real code and its not intended to execute real code.
-The point being you can’t do jackshit in liquid that hasn’t been allowed explicitly by the implementation.
-What’s more you can only access data-structures that have been explicitly passed to the template.&lt;/p&gt;
-
-&lt;p&gt;In Jekyll’s case it is not possible to alter what is passed to Liquid without hacking the gem or running custom plugins.
-Both of which cannot be supported by GitHub Pages.&lt;/p&gt;
-
-&lt;p&gt;As a programmer - this is very frustrating.&lt;/p&gt;
-
-&lt;p&gt;But rather than look a gift horse in the mouth we are going to
-suck it up and view it as an opportunity to work around limitations and adopt client-side solutions when possible.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt;
-My personal stance is to not invest time trying to hack liquid. It’s really unnecessary
-&lt;em&gt;from a programmer’s&lt;/em&gt; perspective. That is to say if you have the ability to run custom plugins (i.e. run arbitrary ruby code)
-you are better off sticking with ruby. Toward that end I’ve built &lt;a href=&quot;http://github.com/plusjade/mustache-with-jekyll&quot;&gt;Mustache-with-Jekyll&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;static-assets&quot;&gt;Static Assets&lt;/h2&gt;
-
-&lt;p&gt;Static assets are any file in the root or non-underscored subfolders that are not pages.
-That is they have no valid YAML Front Matter and are thus not treated as Jekyll Pages.&lt;/p&gt;
-
-&lt;p&gt;Static assets should be used for images, css, and javascript files.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-jekyll-parses-files&quot;&gt;How Jekyll Parses Files&lt;/h2&gt;
-
-&lt;p&gt;Remember Jekyll is a processing engine. There are two main types of parsing in Jekyll.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Content parsing.&lt;/strong&gt;
-  This is done with textile or markdown.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Template parsing.&lt;/strong&gt;
-This is done with the liquid templating language.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;7.费城管弦乐团（美国）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;And thus there are two main types of file formats needed for this parsing.&lt;/p&gt;
+&lt;p&gt;　　费城管弦乐团创立于1900年，首任指挥是谢尔。1921年，斯托科夫斯基就任该团的第三任音乐监督，在他的训练下，这个年轻的乐团很快成为全美的“三大乐团”之一。该团在广播与唱片录音方面也极为活跃。此外，该团还积极介绍与首演现代音乐，为美国乐坛带了来欣欣向荣的景象。1938年后，奥曼蒂接任该团的音乐监督，他担任此职竟达41年之久。该团现由当代著名指挥家穆蒂担任常任指挥。&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Post and Page files.&lt;/strong&gt;
-All content in Jekyll is either a post or a page so valid posts and pages are parsed with markdown or textile.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Template files.&lt;/strong&gt;
-  These files go in &lt;code&gt;_layouts&lt;/code&gt; folder and contain your blogs &lt;strong&gt;templates&lt;/strong&gt;. They should be made in HTML with the help of Liquid syntax.
-  Since include files are simply injected into templates they are essentially parsed as if they were native to the template.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;　　费城管弦乐团共有105名团员，每年工作52周，大约举行190多场音乐会。该团以辉煌的音响和多彩的音色闻名于世，被誉为“费城音响”；其各个乐器组内都有著名的演奏家。该团在美国冠盖群雄，堪称为20世纪世界性的“超级交响乐团”。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Arbitrary files and folders.&lt;/strong&gt;
-Files that &lt;em&gt;are not&lt;/em&gt; valid pages are treated as static content and pass through
-Jekyll untouched and reside on your blog in the exact structure and format they originally existed in.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;8.多伦多交响乐团（加拿大）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;formatting-files-for-parsing&quot;&gt;Formatting Files for Parsing.&lt;/h3&gt;
+&lt;p&gt;　　多伦多交响乐团创建于1908年。1923年，克尼兹担任该团的首席指挥。1931年，马克米兰就任该团的音乐监督后，乐团有了长足的进展。马克米兰功劳卓著，曾被英国皇室封为爵士。1936年，著名指挥家朱斯金特接棒，使这个乐团产生了辉煌的演奏效果。1965年，小泽征尔担任该团的音乐监督，使该团终于确立了世界第一流的地位，在这段时间内，该团曾灌录了不少唱片。&lt;/p&gt;
 
-&lt;p&gt;We’ve outlined the need for valid formatting using &lt;strong&gt;YAML Front Matter&lt;/strong&gt;.
-Templates, posts, and pages all need to provide valid YAML Front Matter even if the Matter is empty.
-This is the only way Jekyll knows you want the file processed.&lt;/p&gt;
+&lt;p&gt;　　多伦多交响乐团共有团员95名，近年来由戴维斯接任音乐监督后，该团似乎返老还童，变得格外精神抖擞，演奏富有朝气，音色明亮、华丽。&lt;/p&gt;
 
-&lt;p&gt;YAML Front Matter must be prepended to the top of template/post/page files:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;9.列宁格勒爱乐交响乐团（前苏联）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;---
-layout: post
-category : pages
-tags : [how-to, jekyll]
----
+&lt;p&gt;　　这是俄国历史上最悠久、实力最强的管弦乐团。它的起源可以追溯到18世纪的圣彼得堡宫廷乐团，但是他们举行公开演出却是从本世纪才开始的。1917年，在俄国著名指挥家库塞维斯基担任指挥时，曾以“国立爱乐管弦乐团”之名开始活动。1938年，前苏联著名指挥家姆拉文斯基就任该团的音乐监督，此后的40多年，该团声誉渐高，成为“姆氏的亲兵”而进入黄金时代。&lt;/p&gt;
 
-... contents ...
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;　　列宁格勒爱乐交响乐团的演奏风格充满激情、富有力度感，充分反映出彼得堡这个古老城市的文化特性，在合奏上显示了俄国式洗练的特色。该团最擅长演奏本民族音乐家如柴科夫斯基、肖斯塔科维奇等人的作品，其解释令人信服而表现生动。该团还特意配置了两套水平同样高超的人马，当乐团旅行演出时，必有一套人马留守在“大本营”中。&lt;/p&gt;
 
-&lt;p&gt;Three hyphens on a new line start the Front-Matter block and three hyphens on a new line end the block.
-The data inside the block must be valid YAML.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;10.日本广播（NHK）交响乐团（日本）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Configuration parameters for YAML Front-Matter is outlined here:
-&lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&quot;&gt;A comprehensive explanation of YAML Front Matter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;　　这是1926年以近卫秀为中心而组建的乐团，当时称作“新交响乐团”，次年开始举办定期演奏会。1935年，近卫担任常任指挥，该团从此活跃于日本乐坛。后改称日本交响乐团后，由尾高尚忠和山田雄一任指挥。1951年隶属于日本广播协会（NHK），由此改称为目前的团名。&lt;/p&gt;
 
-&lt;h4 id=&quot;defining-layouts-for-posts-and-templates-parsing&quot;&gt;Defining Layouts for Posts and Templates Parsing.&lt;/h4&gt;
-
-&lt;p&gt;The &lt;code&gt;layout&lt;/code&gt; parameter in the YAML Front Matter defines the template file for which the given post or template should be injected into.
-If a template file specifies its own layout, it is effectively being used as a &lt;code&gt;sub-template.&lt;/code&gt;
-That is to say loading a post file into a template file that refers to another template file with work in the way you’d expect; as a nested sub-template.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-jekyll-generates-the-final-static-files&quot;&gt;How Jekyll Generates the Final Static Files.&lt;/h2&gt;
-
-&lt;p&gt;Ultimately, Jekyll’s job is to generate a static representation of your website.
-The following is an outline of how that’s done:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Jekyll collects data.&lt;/strong&gt;
-  Jekyll scans the posts directory and collects all posts files as post objects. It then scans the layout assets and collects those and finally scans other directories in search of pages.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Jekyll computes data.&lt;/strong&gt;
-  Jekyll takes these objects, computes metadata (permalinks, tags, categories, titles, dates) from them and constructs one
-  big &lt;code&gt;site&lt;/code&gt; object that holds all the posts, pages, layouts, and respective metadata.
-  At this stage your site is one big computed ruby object.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Jekyll liquifies posts and templates.&lt;/strong&gt;
-  Next jekyll loops through each post file and converts (through markdown or textile) and &lt;strong&gt;liquifies&lt;/strong&gt; the post inside of its respective layout(s).
-  Once the post is parsed and liquified inside the the proper layout structure, the layout itself is “liquified”.
- &lt;strong&gt;Liquification&lt;/strong&gt; is defined as follows: Jekyll initiates a Liquid template, and passes a simpler hash representation of the ruby site object as well as a simpler
-  hash representation of the ruby post object. These simplified data structures are what you have access to in the templates.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Jekyll generates output.&lt;/strong&gt;
- Finally the liquid templates are “rendered”, thereby processing any liquid syntax provided in the templates
- and saving the final, static representation of the file.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Notes.&lt;/strong&gt;
-Because Jekyll computes the entire site in one fell swoop, each template is given access to
-a global &lt;code&gt;site&lt;/code&gt; hash that contains useful data. It is this data that you’ll iterate through and format
-using the Liquid tags and filters in order to render it onto a given page.&lt;/p&gt;
-
-&lt;p&gt;Remember, in Jekyll you are an end-user. Your API has only two components:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;The manner in which you setup your directory.&lt;/li&gt;
-  &lt;li&gt;The liquid syntax and variables passed into the liquid templates.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;All the data objects available to you in the templates via Liquid are outlined in the &lt;strong&gt;API Section&lt;/strong&gt; of Jekyll-Bootstrap.
-You can also read the original documentation here: &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Template-Data&quot;&gt;https://github.com/mojombo/jekyll/wiki/Template-Data&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;I hope this paints a clearer picture of what Jekyll is doing and why it works the way it does.
-As noted, our main programming constraint is the fact that our API is limited to what is accessible via Liquid and Liquid only.&lt;/p&gt;
-
-&lt;p&gt;Jekyll-bootstrap is intended to provide helper methods and strategies aimed at making it more intuitive and easier to work with Jekyll =)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Thank you&lt;/strong&gt; for reading this far.&lt;/p&gt;
-
-&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h2&gt;
-
-&lt;p&gt;Please take a look at []()
-or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&lt;/p&gt;
+&lt;p&gt;　　日本广播协会（NHK）交响乐团，是全日本最杰出的乐团，四管编制，全团人员共128名，每年平均演出140场左右（其中定期音乐会60场），听众达30万人次。该团的弦乐部分特别突出，合奏效果也十分完美，其充实的演奏能力，堪与欧美的乐团相媲美。特别是在演奏日本现代作品时，该团最能发挥他们的实力。&lt;/p&gt;
 </description>
-                <link>http://username.github.io/lessons/2011/12/29/jekyll-introduction</link>
-                <guid>http://username.github.io/lessons/2011/12/29/jekyll-introduction</guid>
-                <pubDate>2011-12-29T00:00:00+08:00</pubDate>
+                <link>http://username.github.io/art/2015/03/06/top10-conductor</link>
+                <guid>http://username.github.io/art/2015/03/06/top10-conductor</guid>
+                <pubDate>2015-03-06T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>Open edX 基于oauth2.0的API使用</title>
+                <description>
+&lt;h3 id=&quot;accesstoken&quot;&gt;获取access_token&lt;/h3&gt;
+
+&lt;p&gt;地址：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://&amp;lt;your edxsite&amp;gt;/oauth2/access_token/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;方法：&lt;code&gt;POST&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;参数：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;client_id=&amp;lt;your client_id&amp;gt;
+client_secret=&amp;lt;your client_secret&amp;gt;
+grant_type=password
+username=&amp;lt;your username&amp;gt;
+password=&amp;lt;your password&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;返回：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{&quot;access_token&quot;: &quot;1b159861c3b1c6f4554c2a71168273433ea154dd&quot;, &quot;token_type&quot;: &quot;Bearer&quot;, &quot;expires_in&quot;: 2591999, &quot;scope&quot;: &quot;&quot;}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里的&lt;code&gt;access_token&lt;/code&gt;在下面HEADER中用&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;获取用户信息／获取用户注册课程／等&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;所有的端口可参考：http://edx-platform-api.readthedocs.org/en/latest/endpoints.html&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;地址：&lt;/p&gt;
+
+&lt;p&gt;获取用户信息&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://&amp;lt;your edxsite&amp;gt;/api/mobile/v0.5/users/&amp;lt;your username&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;获取用户注册课程&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://&amp;lt;your edxsite&amp;gt;/api/mobile/v0.5/users/&amp;lt;your username&amp;gt;/course_enrollments/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;方法：&lt;code&gt;GET&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;HEADER：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Authorization: Bearer 1b159861c3b1c6f4554c2a71168273433ea154dd
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+                <link>http://username.github.io/develop/2015/03/04/openedx-oauth2.0-api</link>
+                <guid>http://username.github.io/develop/2015/03/04/openedx-oauth2.0-api</guid>
+                <pubDate>2015-03-04T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>Open edX中安装SmarterEdu</title>
+                <description>
+&lt;p&gt;以下过程给edX安装&lt;a href=&quot;http://smarteredu.org/&quot;&gt;SmarterEdu&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;edxcms&quot;&gt;安装的位置是edX的cms&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1）首先将你的SmarterEdu项目文件夹复制到/edx/app/edxapp/edx-platform/cms目录下，结构如下：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;edx-platform/cms/ 
+  + djangoapps/
+  + envs/
+  + lib/
+  + smartERproject
+      + edx_if/
+      + smarteredu/
+      + static/
+      + templates/
+      + manage.py
+      + ......
+  + static/
+  + templates/
+  + .coveragerc
+  + ......
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;2）在 /edx/app/edxapp/edx-platform/cms/envs/common.py 中设定 INSTALLED_APPS，以安装SmarterEdu的包：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;INSTALLED_APPS = (
+    # SmarterEdu
+    &#39;smarteredu.course&#39;,
+    &#39;smarteredu.appauth&#39;,
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;3）在 /edx/app/edxapp/edx-platform/cms/envs/common.py 中设定cms的包查找路径：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sys.path.append(REPO_ROOT)
+sys.path.append(PROJECT_ROOT / &#39;djangoapps&#39;)
+sys.path.append(PROJECT_ROOT / &#39;smartERproject&#39;)  # 添加该设定后，cms就会查找到你的项目
+sys.path.append(COMMON_ROOT / &#39;djangoapps&#39;)
+sys.path.append(COMMON_ROOT / &#39;lib&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;4）同步edX数据库：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo -u www-data /edx/bin/python.edxapp /edx/app/edxapp/edx-platform/manage.py cms --settings aws syncdb
+sudo -u www-data /edx/bin/python.edxapp /edx/app/edxapp/edx-platform/manage.py cms --settings aws migrate
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+                <link>http://username.github.io/develop/2015/03/04/openedx-install-smarteredu</link>
+                <guid>http://username.github.io/develop/2015/03/04/openedx-install-smarteredu</guid>
+                <pubDate>2015-03-04T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>ec2上SmarterEdu后台安装 之 升级python2.6到python2.7</title>
+                <description>
+&lt;p&gt;在aws的ec2上安装SmarterEdu后台时，由于ec2上python是版本2.6等原因，需要先升级ec2环境。(SmarterEdu后台使用的是python2.7+django1.6)&lt;/p&gt;
+
+&lt;p&gt;本操作也适用于想把python2.6升级到python2.7的朋友。&lt;/p&gt;
+
+&lt;h2 id=&quot;smartereduec2update&quot;&gt;SmarterEdu_EC2_Update&lt;/h2&gt;
+
+&lt;p&gt;setuptools FTP:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://pypi.python.org/packages/source/s/setuptools/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;mod_wsgi地址：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://modwsgi.googlecode.com/files/mod_wsgi-3.3.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;python&quot;&gt;以下为升级python并安装辅助工具包&lt;/h2&gt;
+
+&lt;h4 id=&quot;httpwwwhaogongjunetart2639594&quot;&gt;参考：http://www.haogongju.net/art/2639594&lt;/h4&gt;
+
+&lt;h3 id=&quot;zlib&quot;&gt;1) 安装zlib&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;yum install zlib
+yum install zlib-devel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;＊zlib.h 的目录为/usr/include/zlib.h&lt;/p&gt;
+
+&lt;h3 id=&quot;opensslopenssl-devel&quot;&gt;2) 安装openssl和openssl-devel&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;yum install openssl
+yum install openssl-devel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;python27&quot;&gt;3) 安装并编译python2.7&lt;/h3&gt;
+
+&lt;p&gt;从官网下载python2.7.6的安装包。&lt;/p&gt;
+
+&lt;p&gt;解压后进入目录做以下几步：&lt;/p&gt;
+
+&lt;p&gt;1.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./configure --prefix=/usr/local/lib/python2.7 --with-zlib=/usr/include --enable-shared
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;*两个路径分别为自定义的python2.7安装路径和zlib.h的路径&lt;/p&gt;
+
+&lt;p&gt;*可选参数：–enable-shared –with-ssl&lt;/p&gt;
+
+&lt;p&gt;2.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;vi Modules/Setup
+#前面configure时有加--with-zlib=/usr/include的话这步可能不要？？
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;找到下面这句，去掉注释&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#zlib zlibmodule.c -I$(prefix)/include -L$(exec_prefix)/lib -lz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;回到上层python安装文件夹&lt;/p&gt;
+
+&lt;p&gt;3.&lt;strong&gt;执行make命令操作  对源码进行编译。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;4.&lt;strong&gt;执行make install 进行安装。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;如果没报错就代表 python2.7已经安装到了你的服务器上。&lt;/p&gt;
+
+&lt;p&gt;5.&lt;strong&gt;配置Python共享库&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cp /usr/local/lib/python2.7/lib/libpython2.7.so.1.0 /usr/lib64
+cd /usr/lib64
+ln -s libpython2.7.so.1.0 libpython2.7.so
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;python-1&quot;&gt;4）改变系统的python软链接&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;ln -s /usr/local/lib/python2.7/bin/python /usr/bin/python
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;yum&quot;&gt;5）修正yum的配置&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;vi /usr/bin/yum
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后把文件首行的#!/usr/bin/python 改成#!/usr/bin/python2.6&lt;/p&gt;
+
+&lt;h3 id=&quot;setuptoolspip&quot;&gt;6）安装setuptools和pip&lt;/h3&gt;
+
+&lt;p&gt;直接下载对应的包，解压后进入，执行python setup.py install&lt;/p&gt;
+
+&lt;p&gt;之后建立easy_install和pip的软链接到/user/bin/下，已方便使用。&lt;/p&gt;
+
+&lt;h2 id=&quot;smarteredu&quot;&gt;以下为SmarterEdu需要的配置&lt;/h2&gt;
+
+&lt;h3 id=&quot;django&quot;&gt;7）安装django&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;pip intall django
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;mysqldbmysqlpython&quot;&gt;8）安装MySQLdb和mysql的python包&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;a:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;yum简化安装MySQLdb：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;yum install mysql-server mysql-devel mysql
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;参考：http://blog.csdn.net/xiamizy/article/details/2072525&lt;/p&gt;
+
+&lt;p&gt;启动mysql服务：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;service mysqld start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;参考：http://www.linuxidc.com/Linux/2013-03/81331.htm&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://bbs.csdn.net/topics/310159543
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;连接mysql以及创建数据库：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql -uroot     默认密码为空
+
+mysql&amp;gt; create database mydb DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;*charset和collation的设置：http://www.2cto.com/database/201302/189920.html&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql&amp;gt; SET PASSWORD FOR ‘mydb&#39;@&#39;localhost&#39; = PASSWORD(‘root&#39;);
+mysql&amp;gt; \r mydb -uroot   可以给mydb设置密码，这里不记载了网上查一下。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;b:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;安装python包&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo pip install MySQL-python
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;*另外在mac下需要加参数：
+&lt;code&gt;ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future&lt;/code&gt;，&lt;/p&gt;
+
+&lt;p&gt;参考以下链接 http://blog.csdn.net/xanxus46/article/details/22325253&lt;/p&gt;
+
+&lt;h3 id=&quot;python-2&quot;&gt;9）安装其他python包&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;a:安装django模型的图片支持包pillow&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install pillow
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;b:安装BeautifulSoup&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install BeautifulSoup
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;c:安装bs4&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install beautifulsoup4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;发布&lt;/h2&gt;
+
+&lt;h3 id=&quot;apachewsgimod&quot;&gt;10）安装apache以及wsgi_mod&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;yum install httpd
+yum install httpd-devel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;由于升级了Python，但yum还是指向2.6的，所以这里不使用这个yum命令安装：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;yum install mod_wsgi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;下载mod_wsgi的二进制安装包安装，然后这个重要&lt;code&gt;http://blog.csdn.net/huzhenwei/article/details/7339548&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;查看mod_wsgi.os：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ldd /etc/httpd/modules/mod_wsgi.so
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+                <link>http://username.github.io/develop/2015/03/04/ec2-python2.6-to-python2.7</link>
+                <guid>http://username.github.io/develop/2015/03/04/ec2-python2.6-to-python2.7</guid>
+                <pubDate>2015-03-04T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>OpenEdx 设置smtp发送邮件</title>
+                <description>
+&lt;h2 id=&quot;section&quot;&gt;邮件激活功能具体设置方法：&lt;/h2&gt;
+
+&lt;h4 id=&quot;section-1&quot;&gt;1）配置发件服务器地址和端口&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo vi /edx/app/edxapp/cms.env.json
+
+sudo vi /edx/app/edxapp/lms.env.json
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在以上2个文件里设置&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&quot;EMAIL_HOST&quot;: &quot;mail.bistu.edu.cn&quot;,
+&quot;EMAIL_PORT&quot;: 25,
+&quot;EMAIL_USE_TLS&quot;: true,
+&quot;SITE_NAME&quot;: &quot;这里设置你的域名，将会影响到激活地址的域名&quot;, 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;section-2&quot;&gt;2）配置发件账号和密码&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo vi /edx/app/edxapp/cms.auth.json
+
+sudo vi /edx/app/edxapp/lms.auth.json
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在以上2个文件里设置&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&quot;EMAIL_HOST_USER&quot;: &quot;*****&quot;,
+&quot;EMAIL_HOST_PASSWORD&quot;:&quot;*****&quot;,
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;edxapp&quot;&gt;3）确认无误，重启edxapp&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp:
+sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp_worker:
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+                <link>http://username.github.io/develop/2015/02/26/openedx-smtp-config</link>
+                <guid>http://username.github.io/develop/2015/02/26/openedx-smtp-config</guid>
+                <pubDate>2015-02-26T00:00:00+08:00</pubDate>
         </item>
 
 
