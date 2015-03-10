@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>挑灯观星 - 版本库</title>
+
+    <link rel="stylesheet" href="/theme/css/normalize.css" />
+    <link rel="stylesheet" href="/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="/theme/css/style.css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" />	
+    <script src="/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="">挑灯观星</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+            <article>
+                <a href="/jie-jue-gitti-jiao-min-gan-xin-xi-hui-tui-gitban-ben-ku-dao-mou-yi-ge-commit.html"><h3 class="article-title">解决git提交敏感信息(回退git版本库到某一个commit)</h3></a>
+<h6 class="subheader" title="2013-06-07T00:00:00+08:00">五 07 六月 2013
+</h6>
+
+
+<p>git是一个很好的版本库, 现在很多人用它, 并在github上创建项目, 相信大家都有过将敏感信息提交版本的经历, 如何删除? 好像只有删除版本库来解决, 其实我们可以通过回退版本库删除相应的commit来将提交的敏感信息去掉.</p>
+<h2>备份本地代码</h2>
+<p>首先我们将本地代码的更改备份一下, 以防丢失更改</p>
+<h2>回退本地代码的commit</h2>
+<p>备份完数据, 我们就可以先回退本地的版本库</p>
+<div class="highlight"><pre>git reset --hard HEAD~1        <span class="c"># 回退到上一次的提交, 如果是上n次就将1改成对应的数字</span>
+</pre></div>
+
+
+<h2>回退远端版本库</h2>
+<p>接下来如果你直接提交会发现提交不了, 说远端做了更改需要先pull一下, 如果pull咱们就白白做上面的操作, 所以我们可以在别的分支操作</p>
+<h3>新建一个分支, 并提交</h3>
+<div class="highlight"><pre>git checkout -b temp
+git push origin temp:temp
+</pre></div>
+
+
+<h3>重建主分支</h3>
+<p>下面我们可以删除并重建主分支, 如果是<code>github</code>的话需要将<code>Default Branch</code>切换到别的分支(项目主页-&gt;Settings即可看到)</p>
+<div class="highlight"><pre>git push origin --delete master   <span class="c"># 删除远端主分支</span>
+git branch -d master              <span class="c"># 删除本地主分支</span>
+git checkout -b master            <span class="c"># 新建主分支并切换到主分支</span>
+git push origin master            <span class="c"># 提交主分支</span>
+</pre></div>
+
+
+<p>这样我们就删除之前提交的敏感信息(如果是<code>github</code>现在就可以把默认分支切换到 <code>master</code>)</p>
+<h3>删除临时分支</h3>
+<div class="highlight"><pre>git branch -d temp
+git push origin --delete temp
+</pre></div><p class="subheader">Category: <a href="/category/git.html">git</a>
+
+    Tagged: 
+    <a href="/tag/git.html">git </a>
+    <a href="/tag/min-gan-xin-xi.html">敏感信息 </a>
+    <a href="/tag/hui-tui.html">回退 </a>
+    <a href="/tag/commit.html">commit </a>
+    <a href="/tag/ban-ben-ku.html">版本库 </a>
+</p>
+
+
+
+            </article>
+
+<div class="pagination-centered">
+<h6 class="subheader">Page 1 of 1</h6>
+
+<p>
+
+</p>
+</div>
+
+
+
+            <!-- /#posts-list -->
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="/archives.html">Archives</a>
+            <li><a href="/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="/category/git.html">git</a></li>
+            <li><a href="/category/misc.html">misc</a></li>
+            <li><a href="/category/python.html">Python</a></li>
+            <li><a href="/category/shell.html">shell</a></li>
+   
+        </ul>
+
+        <h5 class="sidebar-title">Links</h5>
+        <ul class="side-nav">
+            <li><a href="http://getpelican.com/">Pelican</a></li>
+            <li><a href="http://python.org/">Python.org</a></li>
+            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+            <li><a href="#">You can modify those links in your config file</a></li>
+        </ul>
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="#">You can add links in your config file</a></li>
+            <li><a href="#">Another social link</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>挑灯观星 by cn</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

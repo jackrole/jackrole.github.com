@@ -4,7 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>挑灯观星</title>
+    <title>OpenEdx 设置smtp发送邮件</title>
 
     <link rel="stylesheet" href="/theme/css/normalize.css" />
     <link rel="stylesheet" href="/theme/css/foundation.min.css" />
@@ -42,10 +42,59 @@
 
     <!-- Main Blog Content -->
     <div class="large-9 columns">
-<ul class="circle">
-	<li><a href="category/art.html">art</a></li>
-	<li><a href="category/develop.html">develop</a></li>
-</ul>
+<article>
+    <header>
+        <h3 class="article-title"><a href="/openedx-she-zhi-smtpfa-song-you-jian.html" rel="bookmark"
+        title="Permalink to OpenEdx 设置smtp发送邮件">OpenEdx 设置smtp发送邮件</a></h3>
+    </header>
+
+<h6 class="subheader" title="2015-02-26T00:00:00+08:00">四 26 二月 2015
+</h6>
+
+
+    <h2>邮件激活功能具体设置方法：</h2>
+<h4>1）配置发件服务器地址和端口</h4>
+<div class="highlight"><pre>sudo vi /edx/app/edxapp/cms.env.json
+
+sudo vi /edx/app/edxapp/lms.env.json
+</pre></div>
+
+
+<p>在以上2个文件里设置</p>
+<div class="highlight"><pre>&quot;EMAIL_HOST&quot;: &quot;mail.bistu.edu.cn&quot;,
+&quot;EMAIL_PORT&quot;: 25,
+&quot;EMAIL_USE_TLS&quot;: true,
+&quot;SITE_NAME&quot;: &quot;这里设置你的域名，将会影响到激活地址的域名&quot;,
+</pre></div>
+
+
+<h4>2）配置发件账号和密码</h4>
+<div class="highlight"><pre>sudo vi /edx/app/edxapp/cms.auth.json
+
+sudo vi /edx/app/edxapp/lms.auth.json
+</pre></div>
+
+
+<p>在以上2个文件里设置</p>
+<div class="highlight"><pre>&quot;EMAIL_HOST_USER&quot;: &quot;*****&quot;,
+&quot;EMAIL_HOST_PASSWORD&quot;:&quot;*****&quot;,
+</pre></div>
+
+
+<h4>3）确认无误，重启edxapp</h4>
+<div class="highlight"><pre>sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp:
+sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp_worker:
+</pre></div>
+<p class="subheader">Category: <a href="/category/develop.html">develop</a>
+
+    Tagged: 
+    <a href="/tag/edx.html">edx </a>
+</p>
+
+
+
+
+</article>
     </div>
     <!-- End Main Content -->
 
