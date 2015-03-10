@@ -46,6 +46,161 @@
         
 
             <article>
+                <a href="/pythonxu-ni-huan-jing-virtualenv.html"><h3 class="article-title">python虚拟环境virtualenv</h3></a>
+<h6 class="subheader" title="2015-03-10T00:00:00+08:00">二 10 三月 2015
+</h6>
+
+
+<h2>virtualenv</h2>
+<p>用于创建独立的Python环境，多个Python相互独立，互不影响，它能够： </p>
+<ol>
+<li>
+<p><strong>在没有权限的情况下安装新套件</strong></p>
+</li>
+<li>
+<p><strong>不同应用可以使用不同的套件版本</strong></p>
+</li>
+<li>
+<p><strong>套件升级不影响其他应用</strong></p>
+</li>
+</ol>
+<h3>安装</h3>
+<div class="highlight"><pre>sudo apt-get install python-virtualenv
+</pre></div>
+
+
+<h3>使用方法</h3>
+<div class="highlight"><pre>virtualenv [虚拟环境名称]
+</pre></div>
+
+
+<p>如，创建<code>ENV</code>的虚拟环境</p>
+<div class="highlight"><pre>virtualenv ENV
+</pre></div>
+
+
+<p>默认情况下，虚拟环境会依赖系统环境中的site packages，就是说系统中已经安装好的第三方package也会安装在虚拟环境中，如果不想依赖这些package，那么可以加上参数 --no-site-packages建立虚拟环境</p>
+<div class="highlight"><pre>virtualenv --no-site-packages [虚拟环境名称]
+</pre></div>
+
+
+<h3>启动虚拟环境</h3>
+<div class="highlight"><pre>cd ENV
+source ./bin/activate
+</pre></div>
+
+
+<p>注意此时命令行会多一个(ENV)，ENV为虚拟环境名称，接下来所有模块都只会安装到该目录中去。</p>
+<h3>退出虚拟环境</h3>
+<div class="highlight"><pre>deactivate
+</pre></div>
+
+
+<h3>在虚拟环境安装Python套件</h3>
+<p>Virtualenv 附带有pip安装工具，因此需要安装的套件可以直接运行：</p>
+<div class="highlight"><pre>pip install [套件名称]
+</pre></div>
+
+
+<p>如果没有启动虚拟环境，系统也安装了pip工具，那么套件将被安装在系统环境中，为了避免发生此事，可以在<code>~/.bashrc</code>文件中加上：</p>
+<div class="highlight"><pre>export PIP_REQUIRE_VIRTUALENV=true
+</pre></div>
+
+
+<p>或者让在执行pip的时候让系统自动开启虚拟环境：</p>
+<div class="highlight"><pre>export PIP_RESPECT_VIRTUALENV=true
+</pre></div>
+
+
+<hr />
+<h2>Virtualenvwrapper</h2>
+<p>Virtaulenvwrapper是virtualenv的扩展包，用于更方便管理虚拟环境，它可以做：</p>
+<ol>
+<li>
+<p><strong>将所有虚拟环境整合在一个目录下</strong></p>
+</li>
+<li>
+<p><strong>管理（新增，删除，复制）虚拟环境</strong></p>
+</li>
+<li>
+<p><strong>切换虚拟环境</strong></p>
+</li>
+<li>
+<p><strong>...</strong></p>
+</li>
+</ol>
+<h3>安装</h3>
+<div class="highlight"><pre>sudo easy_install virtualenvwrapper
+</pre></div>
+
+
+<p>此时还不能使用virtualenvwrapper，默认virtualenvwrapper安装在/usr/local/bin下面，实际上你需要运行virtualenvwrapper.sh文件才行，先别急，打开这个文件看看,里面有安装步骤，我们照着操作把环境设置好。</p>
+<p>创建目录用来存放虚拟环境</p>
+<div class="highlight"><pre><span class="x">mkdir </span><span class="p">$</span><span class="nv">HOME</span><span class="x">/.virtualenvs</span>
+</pre></div>
+
+
+<p>在<code>~/.bashrc</code>中添加行：</p>
+<div class="highlight"><pre><span class="x">export WORKON_HOME=</span><span class="p">$</span><span class="nv">HOME</span><span class="x">/.virtualenvs</span>
+</pre></div>
+
+
+<p>在<code>~/.bashrc</code>中添加行：</p>
+<div class="highlight"><pre>source /usr/local/bin/virtualenvwrapper.sh
+</pre></div>
+
+
+<p>运行：</p>
+<div class="highlight"><pre>source ~/.bashrc
+</pre></div>
+
+
+<p>此时virtualenvwrapper就可以使用了。</p>
+<p><strong>列出虚拟环境列表</strong></p>
+<div class="highlight"><pre>workon
+</pre></div>
+
+
+<p>也可以使用</p>
+<div class="highlight"><pre>lsvirtualenv
+</pre></div>
+
+
+<p><strong>新建虚拟环境</strong></p>
+<div class="highlight"><pre>mkvirtualenv [虚拟环境名称]
+</pre></div>
+
+
+<p><strong>启动/切换虚拟环境</strong></p>
+<div class="highlight"><pre>workon [虚拟环境名称]
+</pre></div>
+
+
+<p><strong>删除虚拟环境</strong></p>
+<div class="highlight"><pre>rmvirtualenv [虚拟环境名称]
+</pre></div>
+
+
+<p><strong>离开虚拟环境</strong></p>
+<div class="highlight"><pre>deactivate
+</pre></div><p class="subheader">Category: <a href="/category/develop.html">develop</a>
+
+    Tagged: 
+    <a href="/tag/python.html">python </a>
+</p>
+
+
+
+            </article>
+
+
+                <hr  class="gradient"/>
+
+
+        
+
+
+            <article>
                 <a href="/ec2shang-smartereduhou-tai-an-zhuang-zhi-sheng-ji-python26dao-python27.html"><h3 class="article-title">ec2上SmarterEdu后台安装 之 升级python2.6到python2.7</h3></a>
 <h6 class="subheader" title="2015-03-04T00:00:00+08:00">三 04 三月 2015
 </h6>
@@ -72,137 +227,7 @@ yum install zlib-devel
 </pre></div>
 
 
-<p>＊zlib.h 的目录为/usr/include/zlib.h</p>
-<h3>2) 安装openssl和openssl-devel</h3>
-<div class="highlight"><pre>yum install openssl
-yum install openssl-devel
-</pre></div>
-
-
-<h3>3) 安装并编译python2.7</h3>
-<p>从官网下载python2.7.6的安装包。</p>
-<p>解压后进入目录做以下几步：</p>
-<p>1.</p>
-<div class="highlight"><pre>./configure --prefix=/usr/local/lib/python2.7 --with-zlib=/usr/include --enable-shared
-</pre></div>
-
-
-<p>*两个路径分别为自定义的python2.7安装路径和zlib.h的路径</p>
-<p>*可选参数：--enable-shared --with-ssl</p>
-<p>2.</p>
-<div class="highlight"><pre>vi Modules/Setup
-#前面configure时有加--with-zlib=/usr/include的话这步可能不要？？
-</pre></div>
-
-
-<p>找到下面这句，去掉注释</p>
-<div class="highlight"><pre>#zlib zlibmodule.c -I$(prefix)/include -L$(exec_prefix)/lib -lz
-</pre></div>
-
-
-<p>回到上层python安装文件夹</p>
-<p>3.<strong>执行make命令操作  对源码进行编译。</strong></p>
-<p>4.<strong>执行make install 进行安装。</strong></p>
-<p>如果没报错就代表 python2.7已经安装到了你的服务器上。</p>
-<p>5.<strong>配置Python共享库</strong></p>
-<div class="highlight"><pre>cp /usr/local/lib/python2.7/lib/libpython2.7.so.1.0 /usr/lib64
-cd /usr/lib64
-ln -s libpython2.7.so.1.0 libpython2.7.so
-</pre></div>
-
-
-<h3>4）改变系统的python软链接</h3>
-<div class="highlight"><pre>ln -s /usr/local/lib/python2.7/bin/python /usr/bin/python
-</pre></div>
-
-
-<h3>5）修正yum的配置</h3>
-<div class="highlight"><pre>vi /usr/bin/yum
-</pre></div>
-
-
-<p>然后把文件首行的#!/usr/bin/python 改成#!/usr/bin/python2.6</p>
-<h3>6）安装setuptools和pip</h3>
-<p>直接下载对应的包，解压后进入，执行python setup.py install</p>
-<p>之后建立easy_install和pip的软链接到/user/bin/下，已方便使用。</p>
-<h2>以下为SmarterEdu需要的配置</h2>
-<h3>7）安装django</h3>
-<div class="highlight"><pre>pip intall django
-</pre></div>
-
-
-<h3>8）安装MySQLdb和mysql的python包</h3>
-<p><strong>a:</strong></p>
-<p>yum简化安装MySQLdb：</p>
-<div class="highlight"><pre>yum install mysql-server mysql-devel mysql
-</pre></div>
-
-
-<p>参考：http://blog.csdn.net/xiamizy/article/details/2072525</p>
-<p>启动mysql服务：</p>
-<div class="highlight"><pre>service mysqld start
-</pre></div>
-
-
-<p>参考：http://www.linuxidc.com/Linux/2013-03/81331.htm</p>
-<div class="highlight"><pre>http://bbs.csdn.net/topics/310159543
-</pre></div>
-
-
-<p>连接mysql以及创建数据库：</p>
-<div class="highlight"><pre>mysql -uroot     默认密码为空
-
-mysql&gt; create database mydb DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-</pre></div>
-
-
-<p>*charset和collation的设置：http://www.2cto.com/database/201302/189920.html</p>
-<div class="highlight"><pre>mysql&gt; SET PASSWORD FOR ‘mydb&#39;@&#39;localhost&#39; = PASSWORD(‘root&#39;);
-mysql&gt; \r mydb -uroot   可以给mydb设置密码，这里不记载了网上查一下。
-</pre></div>
-
-
-<p><strong>b:</strong></p>
-<p>安装python包</p>
-<div class="highlight"><pre>sudo pip install MySQL-python
-</pre></div>
-
-
-<p>*另外在mac下需要加参数：
-<code>ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future</code>，</p>
-<p>参考以下链接 http://blog.csdn.net/xanxus46/article/details/22325253</p>
-<h3>9）安装其他python包</h3>
-<p><strong>a:安装django模型的图片支持包pillow</strong></p>
-<div class="highlight"><pre>pip install pillow
-</pre></div>
-
-
-<p><strong>b:安装BeautifulSoup</strong></p>
-<div class="highlight"><pre>pip install BeautifulSoup
-</pre></div>
-
-
-<p><strong>c:安装bs4</strong></p>
-<div class="highlight"><pre>pip install beautifulsoup4
-</pre></div>
-
-
-<h2>发布</h2>
-<h3>10）安装apache以及wsgi_mod</h3>
-<div class="highlight"><pre>yum install httpd
-yum install httpd-devel
-</pre></div>
-
-
-<p>由于升级了Python，但yum还是指向2.6的，所以这里不使用这个yum命令安装：</p>
-<div class="highlight"><pre>yum install mod_wsgi
-</pre></div>
-
-
-<p>下载mod_wsgi的二进制安装包安装，然后这个重要<code>http://blog.csdn.net/huzhenwei/article/details/7339548</code></p>
-<p>查看mod_wsgi.os：</p>
-<div class="highlight"><pre>ldd /etc/httpd/modules/mod_wsgi.so
-</pre></div><p class="subheader">Category: <a href="/category/develop.html">develop</a>
+<p>＊zlib.h ...</p><p class="subheader">Category: <a href="/category/develop.html">develop</a>
 
     Tagged: 
     <a href="/tag/aws.html">aws </a>
@@ -213,11 +238,9 @@ yum install httpd-devel
 
 
 
-            </article>
-
-
+                <a class="button radius secondary small right" href="/ec2shang-smartereduhou-tai-an-zhuang-zhi-sheng-ji-python26dao-python27.html">Read More</a>
                 <hr  class="gradient"/>
-
+            </article>
 
         
 
