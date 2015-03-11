@@ -46,6 +46,80 @@
         
 
             <article>
+                <a href="/edx-platformzhong-ge-ge-she-zhi-wen-jian-de-guan-xi.html"><h3 class="article-title">edx-platform中各个设置文件的关系</h3></a>
+<h6 class="subheader" title="2015-03-11T00:00:00+08:00">三 11 三月 2015
+</h6>
+
+
+<p>edx-platform的devstack下面有诸多的设置文件，刚接触edx开发难免会被这些文件搞昏头。
+下面简略整理了下它们之间的联系。</p>
+<p>edx-platform在lms和cms下各有一套设定，位于下面两个目录：</p>
+<div class="highlight"><pre>edx-platform/lms/envs
+edx-platform/cms/envs
+</pre></div>
+
+
+<h1>devstack.py</h1>
+<p>lms中引用关系</p>
+<div class="highlight"><pre>edx-platform/lms/envs/common.py
+↓↓
+
+edx-platform/lms/envs/aws.py
+↓↓
+
+edx-platform/lms/envs/devstack.py
+</pre></div>
+
+
+<p>cms中引用关系</p>
+<div class="highlight"><pre>edx-platform/lms/envs/common.py
+↓↓
+
+edx-platform/cms/envs/common.py
+↓↓
+
+edx-platform/cms/envs/aws.py
+↓↓
+
+edx-platform/cms/envs/devstack.py
+</pre></div>
+
+
+<h1>dev.py</h1>
+<p>lms中引用关系</p>
+<div class="highlight"><pre>edx-platform/lms/envs/common.py
+↓↓
+
+edx-platform/lms/envs/dev.py
+</pre></div>
+
+
+<p>cms中引用关系</p>
+<div class="highlight"><pre>edx-platform/lms/envs/common.py
+↓↓
+
+edx-platform/cms/envs/common.py
+↓↓
+
+edx-platform/cms/envs/dev.py
+</pre></div><p class="subheader">Category: <a href="/category/develop.html">develop</a>
+
+    Tagged: 
+    <a href="/tag/edx.html">edx </a>
+</p>
+
+
+
+            </article>
+
+
+                <hr  class="gradient"/>
+
+
+        
+
+
+            <article>
                 <a href="/pythonxu-ni-huan-jing-virtualenv.html"><h3 class="article-title">python虚拟环境virtualenv</h3></a>
 <h6 class="subheader" title="2015-03-10T00:00:00+08:00">二 10 三月 2015
 </h6>
@@ -98,92 +172,7 @@ source ./bin/activate
 
 <h3>在虚拟环境安装Python套件</h3>
 <p>Virtualenv 附带有pip安装工具，因此需要安装的套件可以直接运行：</p>
-<div class="highlight"><pre>pip install [套件名称]
-</pre></div>
-
-
-<p>如果没有启动虚拟环境，系统也安装了pip工具，那么套件将被安装在系统环境中，为了避免发生此事，可以在<code>~/.bashrc</code>文件中加上：</p>
-<div class="highlight"><pre>export PIP_REQUIRE_VIRTUALENV=true
-</pre></div>
-
-
-<p>或者让在执行pip的时候让系统自动开启虚拟环境：</p>
-<div class="highlight"><pre>export PIP_RESPECT_VIRTUALENV=true
-</pre></div>
-
-
-<hr />
-<h2>Virtualenvwrapper</h2>
-<p>Virtaulenvwrapper是virtualenv的扩展包，用于更方便管理虚拟环境，它可以做：</p>
-<ol>
-<li>
-<p><strong>将所有虚拟环境整合在一个目录下</strong></p>
-</li>
-<li>
-<p><strong>管理（新增，删除，复制）虚拟环境</strong></p>
-</li>
-<li>
-<p><strong>切换虚拟环境</strong></p>
-</li>
-<li>
-<p><strong>...</strong></p>
-</li>
-</ol>
-<h3>安装</h3>
-<div class="highlight"><pre>sudo easy_install virtualenvwrapper
-</pre></div>
-
-
-<p>此时还不能使用virtualenvwrapper，默认virtualenvwrapper安装在/usr/local/bin下面，实际上你需要运行virtualenvwrapper.sh文件才行，先别急，打开这个文件看看,里面有安装步骤，我们照着操作把环境设置好。</p>
-<p>创建目录用来存放虚拟环境</p>
-<div class="highlight"><pre><span class="x">mkdir </span><span class="p">$</span><span class="nv">HOME</span><span class="x">/.virtualenvs</span>
-</pre></div>
-
-
-<p>在<code>~/.bashrc</code>中添加行：</p>
-<div class="highlight"><pre><span class="x">export WORKON_HOME=</span><span class="p">$</span><span class="nv">HOME</span><span class="x">/.virtualenvs</span>
-</pre></div>
-
-
-<p>在<code>~/.bashrc</code>中添加行：</p>
-<div class="highlight"><pre>source /usr/local/bin/virtualenvwrapper.sh
-</pre></div>
-
-
-<p>运行：</p>
-<div class="highlight"><pre>source ~/.bashrc
-</pre></div>
-
-
-<p>此时virtualenvwrapper就可以使用了。</p>
-<p><strong>列出虚拟环境列表</strong></p>
-<div class="highlight"><pre>workon
-</pre></div>
-
-
-<p>也可以使用</p>
-<div class="highlight"><pre>lsvirtualenv
-</pre></div>
-
-
-<p><strong>新建虚拟环境</strong></p>
-<div class="highlight"><pre>mkvirtualenv [虚拟环境名称]
-</pre></div>
-
-
-<p><strong>启动/切换虚拟环境</strong></p>
-<div class="highlight"><pre>workon [虚拟环境名称]
-</pre></div>
-
-
-<p><strong>删除虚拟环境</strong></p>
-<div class="highlight"><pre>rmvirtualenv [虚拟环境名称]
-</pre></div>
-
-
-<p><strong>离开虚拟环境</strong></p>
-<div class="highlight"><pre>deactivate
-</pre></div><p class="subheader">Category: <a href="/category/develop.html">develop</a>
+<div class="highlight"><pre>pip install ...</pre></div><p class="subheader">Category: <a href="/category/develop.html">develop</a>
 
     Tagged: 
     <a href="/tag/python.html">python </a>
@@ -191,11 +180,9 @@ source ./bin/activate
 
 
 
-            </article>
-
-
+                <a class="button radius secondary small right" href="/pythonxu-ni-huan-jing-virtualenv.html">Read More</a>
                 <hr  class="gradient"/>
-
+            </article>
 
         
 
