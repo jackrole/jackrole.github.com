@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelican静态博客搭建总结 - ☆挑灯乄观星☆</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+    <link rel="stylesheet" href="http://jacksing.github.io/theme/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://jacksing.github.io/theme/font-icons/style.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://jacksing.github.io/theme/css/niu2.min.css" type="text/css" />
+
+    <link rel="canonical" href="http://jacksing.github.io/note/pelicanjing-tai-bo-ke-da-jian-zong-jie.html" />
+    
+    <script type="text/javascript">window.onload=function(){};</script>
+    <!--[if lt IE 9]>
+        <script src="http://jacksing.github.io/theme/js/html5shiv.js"></script>
+        <script src="http://jacksing.github.io/theme/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body> 
+    <div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://jacksing.github.io">
+            <i class="icon-home"></i>☆挑灯乄观星☆
+        </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+            <li><a href="http://smarteredu.org" title="smarteredu">
+                <i class="icon-rocket"></i>SmarterEdu</a>
+            </li>
+            <li><a href="/tag/" title="tags">
+                <i class="icon-tag"></i>标签</a>
+            </li>
+        <!-- category dropdown list -->
+        <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-folder-open"></i>分类<b class="caret"></b>
+           </a>
+           <ul class="dropdown-menu">
+               <li><a href="http://jacksing.github.io/art/index.html">
+                      <i class="icon-coffee"></i>日常
+                      (1)</a></li>
+               <li><a href="http://jacksing.github.io/develop/index.html">
+                      <i class="icon-code"></i>开发
+                      (7)</a></li>
+               <li><a href="http://jacksing.github.io/note/index.html">
+                      <i class="icon-book"></i>笔记
+                      (1)</a></li>
+           </ul>
+        </li>
+        <!--  self defined dropdown list -->
+        <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               <i class="icon-archive"></i>存档<b class="caret"></b>
+           </a>
+           <ul class="dropdown-menu">
+               <li><a href="/archives.html" title="archives order by publish time">
+                 <i class="icon-calendar"></i>存档 (按发布时间)</a>
+               </li>
+               <li><a href="/archives_updatedate.html" title="archives order by modify time">
+                 <i class="icon-pencil"></i>存档 (按修改时间)</a>
+               </li>
+           </ul>
+        </li>
+        </ul>
+        
+        <!-- right nav bar -->
+        <ul class="nav navbar-nav navbar-right">
+        <!-- google custom search -->
+       </ul>
+    </nav>
+</div>
+</div>    </div>
+    
+    <div id="body-content">
+<div class="col-md-8 col-md-offset-2">
+    <h1 id="content-heading">Pelican静态博客搭建总结</h1>
+</div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
+    <div id="niu2-main-content">
+        <h2 id="db0a39">转载前言：</h2>
+<p>这是一偏很好的关于Pelican的总结博客，<a href="http://blog.atime.me/note/pelican-setup-summary.html" title="MWB日常笔记 Pelican静态博客搭建总结">原文地址</a>。</p>
+<hr />
+<p>介绍Pelican并总结在搭建Pelican博客过程中需要注意的问题等。</p>
+<h2 id="e09fcb">Pelican介绍</h2>
+<p><a href="https://github.com/getpelican/pelican" title="pelican">Pelican</a>是一个用Python语言编写的静态网站生成器，支持使用restructuredText和Markdown写文章，配置灵活，扩展性强。目前Pelican已发布3.2.2版本，有许多优秀的<a href="https://github.com/getpelican/pelican-themes" title="pelican官方主题仓库">主题</a>和<a href="https://github.com/getpelican/pelican-plugins" title="pelican官方插件仓库">插件</a>可供使用。</p>
+<h2 id="950726">配置文件介绍</h2>
+<p>以下内容以Pelican3.2.2的配置文件为标准，选择部分难设置的变量进行说明。</p>
+<h3 id="15309d">时区和时间设置</h3>
+<p>时间的具体显示样式取决于所使用的主题，需要查看对应的jinja2代码，时间的格式见<a href="http://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior" title="python strftime 格式">这里</a>。</p>
+<pre><code>TIMEZONE = 'Asia/Shanghai'
+DEFAULT_DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
+</code></pre>
+<h3 id="f98c3f">其他有用的设置</h3>
+<p>使用目录名作为文章的分类名</p>
+<pre><code>USE_FOLDER_AS_CATEGORY = True
+</code></pre>
+<p>使用文件名作为文章或页面的slug（url）</p>
+<pre><code>FILENAME_METADATA = '(?P&lt;slug&gt;.*)'
+</code></pre>
+<p>页面的显示路径和保存路径，推荐下面的方式</p>
+<pre><code>ARTICLE_URL = '{category}/{slug}.html'
+ARTICLE_SAVE_AS = ARTICLE_URL
+PAGE_URL = '{slug}.html'
+PAGE_SAVE_AS = PAGE_URL
+CATEGORY_URL = '{slug}/index.html'
+CATEGORY_SAVE_AS = CATEGORY_URL
+TAG_URL = 'tag/{slug}.html'
+TAG_SAVE_AS = TAG_URL
+TAGS_SAVE_AS = 'tag/index.html'
+</code></pre>
+<h2 id="fc5eaf">需要注意的问题</h2>
+<h3 id="cae4e0">编码问题</h3>
+<p>对于使用python2.x的同学，如果遇到<code>ascii codec cannot decode ...</code>之类的问题，建议参照<a href="/note/python-notes.html#11d0f24533a5bf4819deb8f98b5375de" title="python2.x设置默认编码为UTF-8">这里</a>的方法将python的默认编码设置为UTF-8。</p>
+<h2 id="784680">优秀主题推荐</h2>
+<p>官方主题仓库见<a href="https://github.com/getpelican/pelican-themes" title="pelican官方主题仓库">这里</a>，另外github上还有许多没有加入官方主题仓库的优秀pelican主题，请善用github的搜索功能。</p>
+<h3 id="87ce76">Elegant</h3>
+<p><a href="https://github.com/talha131/pelican-elegant" title="pelican-elegant主题">Elegant</a>是我见过的pelican主题里最优雅漂亮的一个了，功能也超齐全，<a href="http://oncrashreboot.com/pelican-elegant" title="pelican-elegant介绍和配置说明">这里</a>有一篇作者写的介绍和配置文章。</p>
+<h3 id="53ceb8">Niu-X2</h3>
+<p>接下来是毛遂自荐，Niu-X2是本人业余时间用bootstrap3创作的一个主题，<del>本站目前正在用</del>，功能比较齐全，不算漂亮但很对我自己的口味，代码和配置方法都在<a href="https://github.com/mawenbao/niu-x2" title="niu-x2主题">这里</a>。官方主题仓库里的那个niu-x2版本比较老了，如果感兴趣请直接从我的仓库里拉取。</p>
+<p>本博客目前在用的主题是Niu-X2的一个带侧边栏的分支，代码见<a href="https://github.com/mawenbao/niu-x2-sidebar" title="niu-x2带侧边栏的主题">niu-x2-sidebar</a>。相对与Niu-X2，目前的主题添加了目录定位和目录自动滚动等功能，同时还完善了脚注(footnote)支持(示例见<a href="http://blog.atime.me/note/golang-summary.html">这篇文章</a>)。需要注意的是，添加侧边栏后，主题的自适应性不如Niu-X2。具体表现是，当可视区域比较窄的时候，侧边栏会被置于页面底部，目前还没有解决办法。 </p>
+<h2 id="0f77e9">优秀插件推荐</h2>
+<p>使用插件会延长pelican的编译时间，不过这不是什么问题。这里仅推荐我认为必备的插件，另外官方插件仓库见<a href="https://github.com/getpelican/pelican-plugins" title="pelican官方插件仓库">这里</a>。</p>
+<h3 id="e1da49">sitemap</h3>
+<p><a href="https://github.com/getpelican/pelican-plugins/tree/master/sitemap" title="pelican sitemap插件">sitemap</a>可以生成xml和txt格式的网站地图，配置见插件的readme。配置举例：</p>
+<pre><code>SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+        },
+    'changefreqs': {
+        'articles': 'weekly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+        }
+    }
+</code></pre>
+<h3 id="e1c41e">gzip_cache</h3>
+<p><a href="https://github.com/getpelican/pelican-plugins/tree/master/gzip_cache" title="pelican gzip_cache插件">gzip_cache</a>可以将所有的页面压缩为gz格式，有效加快页面的加载速度。</p>
+<h2 id="8d9790">我的配置文件</h2>
+<p>下面是我的配置文件，基于<a href="https://github.com/mawenbao/niu-x2-sidebar" title="niu-x2带侧边栏的主题">niu-x2-sidebar</a>的<a href="https://github.com/mawenbao/niu-x2-sidebar/tree/icomoon" title="niu-x2-sidebar的icomoon分支">icomoon</a>分支。（已屏蔽部分账号信息，使用时请自行替换）
+最新的配置文件请访问<a href="https://github.com/mawenbao/pelican-blog-content/blob/master/pelicanconf.py">pelican-blog-content/pelicanconf.py</a>。</p>
+<p>］ #!/usr/bin/env python
+    # -<em>- coding: utf-8 -</em>- #
+    from <strong>future</strong> import unicode_literals
+    from collections import OrderedDict
+    import datetime</p>
+<pre><code>AUTHOR = u'Ma Wenbao'
+SITENAME = u'MWB日常笔记'
+SITEURL = 'http://blog.atime.me'
+
+TIMEZONE = 'Asia/Shanghai'
+DATE_FORMATS = {
+        'zh_CN': '%Y-%m-%d %H:%M:%S',
+}
+DEFAULT_DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
+DEFAULT_DATE = 'fs'  # use filesystem's mtime
+LOCALE = ('zh_CN.utf8',)
+DEFAULT_LANG = u'zh_CN'
+FILENAME_METADATA = '(?P&lt;slug&gt;.*)'
+GOOGLE_ANALYTICS = 'XXXXXX'
+# feed config
+FEED_DOMAIN = SITEURL
+FEED_ALL_RSS = 'feed.xml'
+FEED_MAX_ITEMS = 20
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+# use directory name as category if not set
+USE_FOLDER_AS_CATEGORY = True
+DELETE_OUTPUT_DIRECTORY = True
+DEFAULT_CATEGORY = 'uncategorized'
+DEFAULT_PAGINATION = 7
+
+READERS = {
+    'html': None,
+}
+
+STATIC_PATHS = [
+    'static',
+    'extra',
+]
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': { 'path': 'CNAME' },
+    'extra/.nojekyll': { 'path': '.nojekyll' },
+    'extra/README': { 'path': 'README.md' },
+    'extra/favicon.ico': { 'path': 'favicon.ico' },
+    'extra/LICENSE.txt': { 'path': 'LICENSE.txt' },
+    'extra/robots.txt': { 'path': 'robots.txt' },
+    'extra/BingSiteAuth.xml': {'path': 'BingSiteAuth.xml' },
+}
+
+ARTICLE_URL = '{category}/{slug}.html'
+ARTICLE_SAVE_AS = ARTICLE_URL
+PAGE_URL = '{slug}.html'
+PAGE_SAVE_AS = PAGE_URL
+CATEGORY_URL = '{slug}/index.html'
+CATEGORY_SAVE_AS = CATEGORY_URL
+TAG_URL = 'tag/{slug}.html'
+TAG_SAVE_AS = TAG_URL
+TAGS_SAVE_AS = 'tag/index.html'
+# disable author pages
+AUTHOR_SAVE_AS = ''
+AUTHORS_SAVE_AS = ''
+
+TEMPLATE_PAGES = {
+    "404.html": "404.html",
+    "archives_updatedate.html": "archives_updatedate.html",
+}
+JINJA_EXTENSIONS = [
+    'jinja2.ext.ExprStmtExtension',
+]
+
+# plugin config
+PLUGIN_PATHS = ['./plugins']
+PLUGINS = [
+    #'pandoc_reader',
+    #'gzip_cache',
+    'update_date',
+    'extract_headings',
+    'sitemap',
+    'summary',
+    'niux2_lazyload_helper',
+    'niux2_hermit_player',
+    #'minify',
+]
+UPDATEDATE_MODE = 'metadata'
+
+# extrac_headings plugin config
+import md5
+def my_slugify(value, sep):
+    m = md5.md5(value)
+    return m.digest().encode('hex')[:6]
+MY_SLUGIFY_FUNC = my_slugify
+MY_TOC_LIST_TYPE = 'ol'
+
+# niux2_lazyload_helper plugin config
+import os
+def my_img_url_2_path(url):
+    if not url.startswith('//static.atime.me'):
+        print("ignore " + url)
+        return ''
+    return os.path.abspath(os.path.join('content', 'static', url[1 + url.index('/', 2):]))
+MY_IMG_URL2PATH_FUNC = my_img_url_2_path
+
+from markdown.extensions import headerid, codehilite
+MD_EXTENSIONS = ([
+    'extra',
+    'footnotes',
+    'tables',
+    codehilite.CodeHiliteExtension(configs=[('linenums', False), ('guess_lang', False)]),
+    headerid.HeaderIdExtension(configs=[('slugify', my_slugify)]),
+])
+
+# sitemap plugin config
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'weekly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
+
+# cache policy, currently no cache
+LOAD_CONTENT_CACHE = False
+CACHE_CONTENT = False
+#CHECK_MODIFIED_METHOD = 'md5'
+
+# theme config
+THEME = './themes/niu-x2-sidebar'
+NIUX2_DEBUG = False
+
+# niu-x2 theme config
+NIUX2_AUTHOR_TRANSL = '作者'
+NIUX2_404_TITLE_TRANSL = '404错误 页面未找到!'
+NIUX2_404_INFO_TRANSL = '请求页面未找到!'
+NIUX2_TAG_TRANSL = '标签'
+NIUX2_ARCHIVE_TRANSL = '存档'
+NIUX2_ARCHIVE_UPDATEDATE_TRANSL = '存档 (按修改时间)'
+NIUX2_CATEGORY_TRANSL = '分类'
+NIUX2_TAG_CLEAR_TRANSL = '清空'
+NIUX2_TAG_FILTER_TRANSL = '过滤标签，不妨试试[0-9]{3}'
+NIUX2_HEADER_TOC_TRANSL = '目录'
+NIUX2_SEARCH_TRANSL = '搜索'
+NIUX2_SEARCH_PLACEHOLDER_TRANSL = '按回车开始搜索 ...'
+NIUX2_COMMENTS_TRANSL = '评论'
+NIUX2_PUBLISHED_TRANSL = '发布时间'
+NIUX2_LASTMOD_TRANSL = '最后修改'
+NIUX2_PAGE_TITLE_TRANSL = '页面'
+NIUX2_RECENT_UPDATE_TRANSL = '最近修改'
+NIUX2_HIDE_SIDEBAR_TRANSL = '隐藏侧边栏'
+NIUX2_SHOW_SIDEBAR_TRANSL = '显示侧边栏'
+NIUX2_REVISION_HISTORY_TRANSL = '修订历史'
+NIUX2_VIEW_SOURCE_TRANSL = '查看源文件'
+
+NIUX2_DUOSHUO_SHORTNAME = 'XXXXXX'
+#NIUX2_DUOSHUO_THREAD_KEY = 'slug'
+NIUX2_PYGMENTS_THEME = 'github'
+NIUX2_PAGINATOR_LENGTH = 11
+NIUX2_RECENT_UPDATE_NUM = 10
+NIUX2_FAVICON_URL = '/favicon.ico'
+NIUX2_GOOGLE_CSE_ID = 'XXXXXX'
+NIUX2_DISPLAY_TITLE = True
+NIUX2_LAZY_LOAD = True
+NIUX2_LAZY_LOAD_TEXT = 'orz 努力加载中'
+NIUX2_LAZY_LOAD_ICON = 'icon-spin icon-spinner2'
+NIUX2_TOOLBAR = True
+NIUX2_TOOLBAR_LOAD_ICON = 'icon-spin icon-4x icon-spinner9'
+
+#NIUX2_LIB_THEME = 'http://cdn.atime.me/niu-x2-sidebar'
+NIUX2_LIB_FONT_ICONS = 'http://cdn.atime.me/font-icons'
+NIUX2_LIB_JQUERY = 'http://cdn.atime.me/jquery/jquery-1.11.0.min.js'
+NIUX2_LIB_BOOTSTRAP = 'http://cdn.atime.me/bootstrap/3.1.1'
+
+NIUX2_CATEGORY_MAP = {
+    'code': ('代码', 'icon-code'),
+    'collection': ('搜藏', 'icon-briefcase'),
+    'essay': ('随笔', 'icon-leaf'),
+    'life': ('日常', 'icon-coffee'),
+    'note': ('笔记', 'icon-book'),
+    'research': ('研究', 'icon-flask'),
+}
+
+NIUX2_HEADER_SECTIONS = [
+    ('关于', 'about me', '/about.html', 'icon-anchor'),
+    ('使用协议', 'agreement', '/agreement.html', 'icon-exclamation-circle'),
+    ('项目', 'my projects', '/my_projects.html', 'icon-rocket'),
+    ('标签', 'tags', '/tag/', 'icon-tag'),
+]
+
+NIUX2_HEADER_DROPDOWN_SECTIONS = OrderedDict()
+NIUX2_HEADER_DROPDOWN_SECTIONS[('存档', 'icon-archive')] = [
+    ('存档 (按发布时间)', 'archives order by publish time', '/archives.html', 'icon-calendar'),
+    ('存档 (按修改时间)', 'archives order by modify time', '/archives_updatedate.html', 'icon-pencil'),
+]
+
+NIUX2_FOOTER_LINKS = [
+    ('关于', 'about me', '/about.html', ''),
+    ('使用协议', 'terms, license and privacy etc.', '/agreement.html', ''),
+    ('沪ICP备14018579号-1', '备案号', 'http://www.miitbeian.gov.cn/', ''),
+]
+
+NIUX2_FOOTER_ICONS = [
+    ('icon-key', 'my public key', '/my_gnupg.html'),
+    ('icon-envelope-o', 'my email address', 'mailto: mwenbao@gmail.com'),
+    ('icon-github-alt', 'my github page', 'http://github.com/mawenbao'),
+    ('icon-rss', 'subscribe my blog', '/feed.xml'),
+]
+</code></pre>
+<h2 id="81f5d5">阅读资料</h2>
+<ul>
+<li><a href="http://docs.getpelican.com/en/3.2/" title="pelican3.2文档">Pelican 3.2 官方文档</a></li>
+</ul>
+    </div>
+    <div id="content-comments">
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="/note/pelicanjing-tai-bo-ke-da-jian-zong-jie.html" data-title="Pelican静态博客搭建总结" data-url="http://jacksing.github.io/note/pelicanjing-tai-bo-ke-da-jian-zong-jie.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = { short_name: 'smarteredu' };
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end --></div>
+
+</div>
+<div class="niu2-right-container col-md-2">
+    <div id="niu2-sidebar-meta" class="niu2-sidebar">
+        <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
+        <div class="niu2-sidebar-value">2015-03-12 17:09</div>
+        <div class="niu2-sidebar-label"><i class="icon-book"></i>分类:</div>
+        <div class="niu2-sidebar-value"><a href="http://jacksing.github.io/note/index.html">笔记</a></div>
+        <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+ 
+            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://jacksing.github.io/tag/pelican.html">pelican</a><sup>1</sup></div>
+            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://jacksing.github.io/tag/zong-jie.html">总结</a><sup>1</sup></div>
+    </div>
+
+    <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+        <div class="niu2-sidebar-label">
+            <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+        </div>
+        <ul id="niu2-sidebar-toc-list">
+            <li><a href="#content-heading">Pelican静态博客搭建总结</a></li>
+            <li><a href='#db0a39'>转载前言：</a></li><li><a href='#e09fcb'>Pelican介绍</a></li><li><a href='#950726'>配置文件介绍</a><ul><li><a href='#15309d'>时区和时间设置</a></li><li><a href='#f98c3f'>其他有用的设置</a></li></ul></li><li><a href='#fc5eaf'>需要注意的问题</a><ul><li><a href='#cae4e0'>编码问题</a></li></ul></li><li><a href='#784680'>优秀主题推荐</a><ul><li><a href='#87ce76'>Elegant</a></li><li><a href='#53ceb8'>Niu-X2</a></li></ul></li><li><a href='#0f77e9'>优秀插件推荐</a><ul><li><a href='#e1da49'>sitemap</a></li><li><a href='#e1c41e'>gzip_cache</a></li></ul></li><li><a href='#8d9790'>我的配置文件</a></li><li><a href='#81f5d5'>阅读资料</a></li>
+            <li><a href="#content-comments">评论</a></li>
+        </ul>
+    </div>
+</div>    </div>
+
+    <div class="niu2-footer">
+        <div id="body-footer" class="col-md-6 col-md-offset-2">
+<hr/>
+<p>
+    Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+    <a href="https://github.com/mawenbao/niu-x2-sidebar">theme</a> built with <a href="http://getbootstrap.com">Bootstrap3</a>
+    by <a href="http://blog.atime.me">Ma Wenbao</a>, icons by 
+    <a href="http://fortawesome.github.io/Font-Awesome">Font Awesome</a>.
+</p>
+<p>
+    ©
+            2015
+    <a class="niu2-footer-link" href="http://jacksing.github.io">jacksing</a>
+</p>
+<p class="niu2-icons">
+</p>        </div>
+    </div>
+    
+    <div id="niu2-pygments" data-theme="github"></div>
+
+    <script type="text/javascript" src="http://jacksing.github.io/theme/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://jacksing.github.io/theme/js/niu2.min.js"></script>
+    <script type="text/javascript" src="http://jacksing.github.io/theme/js/bootstrap.min.js"></script>
+    <script type="text/javascript">onContentLoaded();</script>
+  </body>
+</html>
