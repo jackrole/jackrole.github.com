@@ -1,127 +1,106 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="utf-8" />
-    <!-- Set the viewport width to device width for mobile -->
-    <meta name="viewport" content="width=device-width" />
-
-    <title>☆挑灯乄观星☆</title>
-
-    <link rel="stylesheet" href="/theme/css/normalize.css" />
-    <link rel="stylesheet" href="/theme/css/foundation.min.css" />
-    <link rel="stylesheet" href="/theme/css/style.css" />
-    <link rel="stylesheet" href="/theme/css/pygments.css" />	
-    <script src="/theme/js/modernizr.js"></script>
-</head>
-
-<body>
-
-<!-- Nav Bar -->
-<nav>
-<div class="top-bar">
-<div class="row">
-    <div class="large-9 large-centered columns">
-	    <h1><a href="">☆挑灯乄观星☆</a></h1>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags - ☆挑灯乄观星☆</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/font-icons/style.min.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/niu2.min.css" type="text/css" />
+    
+    <script type="text/javascript">window.onload=function(){};</script>
+    <!--[if lt IE 9]>
+        <script src="/theme/js/html5shiv.js"></script>
+        <script src="/theme/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body> 
+    <div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="">
+            <i class="icon-home"></i>☆挑灯乄观星☆
+        </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+        <li><a href="/tags.html">
+                <i class="icon-tag"></i>Tag</a>
+        </li>
+        <li><a href="/archives.html">
+                <i class="icon-archive"></i>Archive
+            </a>
+        </li>
+        <!-- category dropdown list -->
+        <!--  self defined dropdown list -->
+        </ul>
+        
+        <!-- right nav bar -->
+        <ul class="nav navbar-nav navbar-right">
+        <!-- google custom search -->
+       </ul>
+    </nav>
+</div>
+</div>    </div>
+    
+    <div id="body-content">
+<div class="col-md-8 col-md-offset-2">
+    <h1><i class="icon-tags"></i>Tag</h1>
+    <input id="niu2-tagcloud-filter-input" type="text" placeholder="filter tags"
+           class="form-control pull-left" onkeyup="tag_filter()">
+    <button class="btn btn-success niu2-button" 
+            onclick="$('#niu2-tagcloud-filter-input').val('');tag_filter()">clear</button>
+    <div id="niu2-tagcloud">
     </div>
 </div>
-</div>
-
-<!-- Show menu items and pages -->
-<div class="row">
-<div class="large-9 columns">
-    <ul class="button-group navigation">
-
-    </ul>
-</div>
-</div>
-</nav>
-<!-- End Nav -->
-
-
-<!-- Main Page Content and Sidebar -->
-<div class="row">
-
-    <!-- Main Blog Content -->
-    <div class="large-9 columns">
-
-<ul class="circle">
-	<li><a href="/tag/aws.html">aws</a></li>
-	<ul class="square">
-	<li><a href="/ec2shang-smartereduhou-tai-an-zhuang-zhi-sheng-ji-python26dao-python27.html"><small>ec2上SmarterEdu后台安装 之 升级python2.6到python2.7</small></li>
-	</ul>
-	<li><a href="/tag/edx.html">edx</a></li>
-	<ul class="square">
-	<li><a href="/open-edx-she-zhi-smtpfa-song-you-jian.html"><small>Open edX 设置smtp发送邮件</small></li>
-	<li><a href="/open-edxzhong-an-zhuang-smarteredu.html"><small>Open edX中安装SmarterEdu</small></li>
-	<li><a href="/open-edx-ji-yu-oauth20de-apishi-yong.html"><small>Open edX 基于oauth2.0的API使用</small></li>
-	<li><a href="/edx-platformzhong-ge-ge-she-zhi-wen-jian-de-guan-xi.html"><small>edx-platform中各个设置文件的关系</small></li>
-	<li><a href="/open-edx-jian-dan-ke-cheng-jian-suo-api.html"><small>Open edX 简单课程检索API</small></li>
-	</ul>
-	<li><a href="/tag/linux.html">linux</a></li>
-	<ul class="square">
-	<li><a href="/ec2shang-smartereduhou-tai-an-zhuang-zhi-sheng-ji-python26dao-python27.html"><small>ec2上SmarterEdu后台安装 之 升级python2.6到python2.7</small></li>
-	</ul>
-	<li><a href="/tag/music.html">music</a></li>
-	<ul class="square">
-	<li><a href="/dang-dai-shi-jie-shi-da-zhi-hui-jia-dang-dai-shi-jie-shi-da-jiao-xiang-le-tuan.html"><small>当代世界十大指挥家 // 当代世界十大交响乐团</small></li>
-	</ul>
-	<li><a href="/tag/python.html">python</a></li>
-	<ul class="square">
-	<li><a href="/ec2shang-smartereduhou-tai-an-zhuang-zhi-sheng-ji-python26dao-python27.html"><small>ec2上SmarterEdu后台安装 之 升级python2.6到python2.7</small></li>
-	<li><a href="/pythonxu-ni-huan-jing-virtualenv.html"><small>python虚拟环境virtualenv</small></li>
-	</ul>
-	<li><a href="/tag/smarteredu.html">smarteredu</a></li>
-	<ul class="square">
-	<li><a href="/ec2shang-smartereduhou-tai-an-zhuang-zhi-sheng-ji-python26dao-python27.html"><small>ec2上SmarterEdu后台安装 之 升级python2.6到python2.7</small></li>
-	<li><a href="/open-edxzhong-an-zhuang-smarteredu.html"><small>Open edX中安装SmarterEdu</small></li>
-	</ul>
-</ul>
-
     </div>
-    <!-- End Main Content -->
 
-    <!-- Sidebar -->
-    <aside class="large-3 columns">
-        <h5 class="sidebar-title">Site</h5>
-        <ul class="side-nav">
-            <li><a href="/archives.html">Archives</a>
-            <li><a href="/tags.html">Tags</a>
-        </ul>
+<div class="niu2-footer">
+    <div id="body-footer" class="col-md-8 col-md-offset-2">
+<hr/>
+<p>
+    Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+    <a href="https://github.com/mawenbao/niu-x2-sidebar">theme</a> built with <a href="http://getbootstrap.com">Bootstrap3</a>
+    by <a href="http://blog.atime.me">Ma Wenbao</a>, icons by 
+    <a href="http://fortawesome.github.io/Font-Awesome">Font Awesome</a>.
+</p>
+<p>
+    ©
+            2015
+    <a class="niu2-footer-link" href="">jacksing</a>
+</p>
+<p class="niu2-icons">
+</p>    </div>
+</div>
+    
+    <div id="niu2-pygments" data-theme="github"></div>
 
-		
-        <h5 class="sidebar-title">Categories</h5>
-        <ul class="side-nav">
-            <li><a href="/category/art.html">art</a></li>
-            <li><a href="/category/develop.html">develop</a></li>
-   
-        </ul>
+    <script type="text/javascript" src="/theme/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/theme/js/niu2.min.js"></script>
+    <script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/js/tagcloud.min.js"></script>
+    <script type="text/javascript">
+var tc = TagCloud.create();
+tc.add('smarteredu', 2, '/tag/smarteredu.html', null);
+tc.add('python', 2, '/tag/python.html', null);
+tc.add('aws', 1, '/tag/aws.html', null);
+tc.add('music', 1, '/tag/music.html', null);
+tc.add('linux', 1, '/tag/linux.html', null);
+tc.add('edx', 5, '/tag/edx.html', null);
+tc.loadEffector('CountSize');tc.loadEffector('CountSize');
 
-        <h5 class="sidebar-title">Links</h5>
-        <ul class="side-nav">
-            <li><a href="http://getpelican.com/">Pelican</a></li>
-            <li><a href="http://python.org/">Python.org</a></li>
-            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-        </ul>
-		
-        <h5 class="sidebar-title">Social</h5>
-        <ul class="side-nav">
-            <li><a href="http://smarteredu.org/">SmarterEdu</a></li>
-        </ul>
-
-    </aside> <!-- End Sidebar -->
-
-</div> <!-- End Main Content and Sidebar -->
-
-
-<!-- Footer -->
-<footer class="row">
-    <div class="large-12 columns">
-        <hr />
-        <div class="row">
-            <div class="large-6 columns">
-              <!--                  <p>☆挑灯乄观星☆ by cn</p> -->
-            </div>
-            </div>
-    </div>
-</footer>
-</body>
+function tag_filter() {
+  tc.searchAndDisplay('niu2-tagcloud', $('#niu2-tagcloud-filter-input').val());
+  return false;
+}
+tc.setup('niu2-tagcloud');
+</script>
+  </body>
 </html>
