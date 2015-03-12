@@ -3,11 +3,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>标签 smarteredu - ☆挑灯乄观星☆</title>
+    <title>Open edX中安装SmarterEdu - ☆挑灯乄观星☆</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
     <link rel="stylesheet" href="http://jacksing.github.io/theme/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="http://jacksing.github.io/theme/font-icons/style.min.css" type="text/css" />
     <link rel="stylesheet" href="http://jacksing.github.io/theme/css/niu2.min.css" type="text/css" />
+
+    <link rel="canonical" href="http://jacksing.github.io/develop/open-edxzhong-an-zhuang-smarteredu.html" />
     
     <script type="text/javascript">window.onload=function(){};</script>
     <!--[if lt IE 9]>
@@ -77,68 +79,93 @@
     
     <div id="body-content">
 <div class="col-md-8 col-md-offset-2">
-
-<h1 class="niu2-index-title">
-<i class="icon-tag icon-lg"></i>smarteredu
-</h1>
+    <h1 id="content-heading">Open edX中安装SmarterEdu</h1>
+</div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
+    <div id="niu2-main-content">
+        <p>以下过程给edX安装<a href="http://smarteredu.org/">SmarterEdu</a>。</p>
+<h3 id="aa1178">安装的位置是edX的cms</h3>
+<p><strong>1）首先将你的SmarterEdu项目文件夹复制到/edx/app/edxapp/edx-platform/cms目录下，结构如下：</strong></p>
+<pre><code>edx-platform/cms/ 
+  + djangoapps/
+  + envs/
+  + lib/
+  + smartERproject
+      + edx_if/
+      + smarteredu/
+      + static/
+      + templates/
+      + manage.py
+      + ......
+  + static/
+  + templates/
+  + .coveragerc
+  + ......
+</code></pre>
+<p><strong>2）在 /edx/app/edxapp/edx-platform/cms/envs/common.py 中设定 INSTALLED_APPS，以安装SmarterEdu的包：</strong></p>
+<pre><code>INSTALLED_APPS = (
+    # SmarterEdu
+    'smarteredu.course',
+    'smarteredu.appauth',
+)
+</code></pre>
+<p><strong>3）在 /edx/app/edxapp/edx-platform/cms/envs/common.py 中设定cms的包查找路径：</strong></p>
+<pre><code>sys.path.append(REPO_ROOT)
+sys.path.append(PROJECT_ROOT / 'djangoapps')
+sys.path.append(PROJECT_ROOT / 'smartERproject')  # 添加该设定后，cms就会查找到你的项目
+sys.path.append(COMMON_ROOT / 'djangoapps')
+sys.path.append(COMMON_ROOT / 'lib')
+</code></pre>
+<p><strong>4）同步edX数据库：</strong></p>
+<pre><code>sudo -u www-data /edx/bin/python.edxapp /edx/app/edxapp/edx-platform/manage.py cms --settings aws syncdb
+sudo -u www-data /edx/bin/python.edxapp /edx/app/edxapp/edx-platform/manage.py cms --settings aws migrate
+</code></pre>
+    </div>
+    <div id="content-comments">
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="/develop/open-edxzhong-an-zhuang-smarteredu.html" data-title="Open edX中安装SmarterEdu" data-url="http://jacksing.github.io/develop/open-edxzhong-an-zhuang-smarteredu.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = { short_name: 'smarteredu' };
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end --></div>
 
 </div>
-
-<div class="col-md-8 col-md-offset-2">
-    <div class="niu2-index-article">
-        <div class="niu2-index-article-title">
-            <span>
-                <a href="http://jacksing.github.io/develop/ec2shang-smartereduhou-tai-an-zhuang-zhi-sheng-ji-python26dao-python27.html">ec2上SmarterEdu后台安装 之 升级python2.6到python2.7</a>
-            </span>
-        </div>
-<div class="niu2-meta-index">
-    <span class="niu2-meta-date-index">
-        <i class="icon-calendar"></i>2015-03-04
-    </span>
-    <span class="niu2-meta-category-index">
-        <i class="icon-code"></i><a href="http://jacksing.github.io/develop/index.html">开发</a>
-    </span>
-    <span class="niu2-meta-tag-index">
-        <i class="icon-tag"></i>
-        <a href="http://jacksing.github.io/tag/aws.html">aws</a>
-        <a href="http://jacksing.github.io/tag/linux.html">linux</a>
-        <a href="http://jacksing.github.io/tag/python.html">python</a>
-        <a href="http://jacksing.github.io/tag/smarteredu.html">smarteredu</a>
-    </span>
-</div>        <div class="niu2-article-summary">
-            
-        </div>
-    </div>
-    <div class="niu2-index-article">
-        <div class="niu2-index-article-title">
-            <span>
-                <a href="http://jacksing.github.io/develop/open-edxzhong-an-zhuang-smarteredu.html">Open edX中安装SmarterEdu</a>
-            </span>
-        </div>
-<div class="niu2-meta-index">
-    <span class="niu2-meta-date-index">
-        <i class="icon-calendar"></i>2015-03-04
-    </span>
-    <span class="niu2-meta-category-index">
-        <i class="icon-code"></i><a href="http://jacksing.github.io/develop/index.html">开发</a>
-    </span>
-    <span class="niu2-meta-tag-index">
-        <i class="icon-tag"></i>
-        <a href="http://jacksing.github.io/tag/edx.html">edx</a>
-        <a href="http://jacksing.github.io/tag/smarteredu.html">smarteredu</a>
-    </span>
-</div>        <div class="niu2-article-summary">
-            
-        </div>
+<div class="niu2-right-container col-md-2">
+    <div id="niu2-sidebar-meta" class="niu2-sidebar">
+        <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
+        <div class="niu2-sidebar-value">2015-03-04 00:00</div>
+        <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
+        <div class="niu2-sidebar-value"><a href="http://jacksing.github.io/develop/index.html">开发</a></div>
+        <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+ 
+            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://jacksing.github.io/tag/edx.html">edx</a><sup>5</sup></div>
+            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://jacksing.github.io/tag/smarteredu.html">smarteredu</a><sup>2</sup></div>
     </div>
 
-
-
-</div>
+    <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+        <div class="niu2-sidebar-label">
+            <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+        </div>
+        <ul id="niu2-sidebar-toc-list">
+            <li><a href="#content-heading">Open edX中安装SmarterEdu</a></li>
+            <li><a href='#aa1178'>安装的位置是edX的cms</a>
+            <li><a href="#content-comments">评论</a></li>
+        </ul>
     </div>
+</div>    </div>
 
-<div class="niu2-footer">
-    <div id="body-footer" class="col-md-8 col-md-offset-2">
+    <div class="niu2-footer">
+        <div id="body-footer" class="col-md-6 col-md-offset-2">
 <hr/>
 <p>
     Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
@@ -152,14 +179,14 @@
     <a class="niu2-footer-link" href="http://jacksing.github.io">jacksing</a>
 </p>
 <p class="niu2-icons">
-</p>    </div>
-</div>
+</p>        </div>
+    </div>
     
     <div id="niu2-pygments" data-theme="github"></div>
 
     <script type="text/javascript" src="http://jacksing.github.io/theme/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="http://jacksing.github.io/theme/js/niu2.min.js"></script>
     <script type="text/javascript" src="http://jacksing.github.io/theme/js/bootstrap.min.js"></script>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">onContentLoaded();</script>
   </body>
 </html>

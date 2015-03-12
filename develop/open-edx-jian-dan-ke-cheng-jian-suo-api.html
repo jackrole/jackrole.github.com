@@ -3,11 +3,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类 - ☆挑灯乄观星☆</title>
+    <title>Open edX 简单课程检索API - ☆挑灯乄观星☆</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
     <link rel="stylesheet" href="http://jacksing.github.io/theme/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="http://jacksing.github.io/theme/font-icons/style.min.css" type="text/css" />
     <link rel="stylesheet" href="http://jacksing.github.io/theme/css/niu2.min.css" type="text/css" />
+
+    <link rel="canonical" href="http://jacksing.github.io/develop/open-edx-jian-dan-ke-cheng-jian-suo-api.html" />
     
     <script type="text/javascript">window.onload=function(){};</script>
     <!--[if lt IE 9]>
@@ -76,20 +78,97 @@
 </div>    </div>
     
     <div id="body-content">
-    <div class="niu2-page">
-      <h1>分类</h1>
-      <ul class="niu2-category-list">
+<div class="col-md-8 col-md-offset-2">
+    <h1 id="content-heading">Open edX 简单课程检索API</h1>
+</div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
+    <div id="niu2-main-content">
+        <h4 id="264d6c">添加courses/search/的api</h4>
+<p><strong>lms/urls.py 添加地址配置</strong></p>
+<pre><code>url(r'^courses/search/$', 'branding.views.search_courses', name="search_courses")
+</code></pre>
+<p><strong>lms/djangoapps/branding/views.py 添加函数</strong></p>
+<pre><code>def search_courses(request):
+    return courseware.views.search_courses(request)
+</code></pre>
+<p><strong>lms/djangoapps/courseware/views.py 添加函数</strong></p>
+<pre><code>def search_courses(request):
+    """
+    Search specified courses, and return them in json format.
+    """
+    courses = get_courses(request.user, request.META.get('HTTP_HOST'))
+    courses = sort_by_announcement(courses)
 
-        <li><a href="http://jacksing.github.io/art/index.html">
-            <i class="icon-coffee"></i>日常
-        </a>(1)</li>
+    offset = request.GET.get('offset')
+    if offset and offset.isdigit():
+        offset = long(offset)
+    else:
+        offset = 0
 
-        <li><a href="http://jacksing.github.io/develop/index.html">
-            <i class="icon-code"></i>开发
-        </a>(7)</li>
-      </ul>
+    limit = request.GET.get('limit')
+    if limit and limit.isdigit():
+        limit = long(limit) + offset
+
+    if offset or limit:
+        courses = courses[offset:limit]
+
+    courses_json = [
+        {
+            'about_course': reverse('about_course', args=[course.id.to_deprecated_string()]),
+            'display_number_with_default': course.display_number_with_default,
+            'is_newish': course.is_newish,
+            'short_description': get_course_about_section(course, 'short_description'),
+            'course_image_url': course_image_url(course),
+            'start_date_is_still_default': course.start_date_is_still_default,
+            'start_datetime_text': course.start_datetime_text(),
+            'title': get_course_about_section(course, 'title'),
+            'university': get_course_about_section(course, 'university'),
+        } for course in courses
+    ]
+    return HttpResponse(cgi.escape(json.dumps(courses_json)))
+</code></pre>
     </div>
+    <div id="content-comments">
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="/develop/open-edx-jian-dan-ke-cheng-jian-suo-api.html" data-title="Open edX 简单课程检索API" data-url="http://jacksing.github.io/develop/open-edx-jian-dan-ke-cheng-jian-suo-api.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = { short_name: 'smarteredu' };
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end --></div>
+
+</div>
+<div class="niu2-right-container col-md-2">
+    <div id="niu2-sidebar-meta" class="niu2-sidebar">
+        <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
+        <div class="niu2-sidebar-value">2015-03-12 00:00</div>
+        <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
+        <div class="niu2-sidebar-value"><a href="http://jacksing.github.io/develop/index.html">开发</a></div>
+        <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+ 
+            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://jacksing.github.io/tag/edx.html">edx</a><sup>5</sup></div>
     </div>
+
+    <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+        <div class="niu2-sidebar-label">
+            <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+        </div>
+        <ul id="niu2-sidebar-toc-list">
+            <li><a href="#content-heading">Open edX 简单课程检索API</a></li>
+            <li><a href='#264d6c'>添加courses/search/的api</a>
+            <li><a href="#content-comments">评论</a></li>
+        </ul>
+    </div>
+</div>    </div>
 
     <div class="niu2-footer">
         <div id="body-footer" class="col-md-6 col-md-offset-2">
@@ -114,6 +193,6 @@
     <script type="text/javascript" src="http://jacksing.github.io/theme/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="http://jacksing.github.io/theme/js/niu2.min.js"></script>
     <script type="text/javascript" src="http://jacksing.github.io/theme/js/bootstrap.min.js"></script>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">onContentLoaded();</script>
   </body>
 </html>

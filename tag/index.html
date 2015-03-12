@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>标签 smarteredu - ☆挑灯乄观星☆</title>
+    <title>标签 - ☆挑灯乄观星☆</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
     <link rel="stylesheet" href="http://jacksing.github.io/theme/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="http://jacksing.github.io/theme/font-icons/style.min.css" type="text/css" />
@@ -77,63 +77,13 @@
     
     <div id="body-content">
 <div class="col-md-8 col-md-offset-2">
-
-<h1 class="niu2-index-title">
-<i class="icon-tag icon-lg"></i>smarteredu
-</h1>
-
-</div>
-
-<div class="col-md-8 col-md-offset-2">
-    <div class="niu2-index-article">
-        <div class="niu2-index-article-title">
-            <span>
-                <a href="http://jacksing.github.io/develop/ec2shang-smartereduhou-tai-an-zhuang-zhi-sheng-ji-python26dao-python27.html">ec2上SmarterEdu后台安装 之 升级python2.6到python2.7</a>
-            </span>
-        </div>
-<div class="niu2-meta-index">
-    <span class="niu2-meta-date-index">
-        <i class="icon-calendar"></i>2015-03-04
-    </span>
-    <span class="niu2-meta-category-index">
-        <i class="icon-code"></i><a href="http://jacksing.github.io/develop/index.html">开发</a>
-    </span>
-    <span class="niu2-meta-tag-index">
-        <i class="icon-tag"></i>
-        <a href="http://jacksing.github.io/tag/aws.html">aws</a>
-        <a href="http://jacksing.github.io/tag/linux.html">linux</a>
-        <a href="http://jacksing.github.io/tag/python.html">python</a>
-        <a href="http://jacksing.github.io/tag/smarteredu.html">smarteredu</a>
-    </span>
-</div>        <div class="niu2-article-summary">
-            
-        </div>
+    <h1><i class="icon-tags"></i>标签</h1>
+    <input id="niu2-tagcloud-filter-input" type="text" placeholder="过滤标签，不妨试试[0-9]{3}"
+           class="form-control pull-left" onkeyup="tag_filter()">
+    <button class="btn btn-success niu2-button" 
+            onclick="$('#niu2-tagcloud-filter-input').val('');tag_filter()">清空</button>
+    <div id="niu2-tagcloud">
     </div>
-    <div class="niu2-index-article">
-        <div class="niu2-index-article-title">
-            <span>
-                <a href="http://jacksing.github.io/develop/open-edxzhong-an-zhuang-smarteredu.html">Open edX中安装SmarterEdu</a>
-            </span>
-        </div>
-<div class="niu2-meta-index">
-    <span class="niu2-meta-date-index">
-        <i class="icon-calendar"></i>2015-03-04
-    </span>
-    <span class="niu2-meta-category-index">
-        <i class="icon-code"></i><a href="http://jacksing.github.io/develop/index.html">开发</a>
-    </span>
-    <span class="niu2-meta-tag-index">
-        <i class="icon-tag"></i>
-        <a href="http://jacksing.github.io/tag/edx.html">edx</a>
-        <a href="http://jacksing.github.io/tag/smarteredu.html">smarteredu</a>
-    </span>
-</div>        <div class="niu2-article-summary">
-            
-        </div>
-    </div>
-
-
-
 </div>
     </div>
 
@@ -160,6 +110,22 @@
     <script type="text/javascript" src="http://jacksing.github.io/theme/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="http://jacksing.github.io/theme/js/niu2.min.js"></script>
     <script type="text/javascript" src="http://jacksing.github.io/theme/js/bootstrap.min.js"></script>
-    <script type="text/javascript"></script>
+<script type="text/javascript" src="http://jacksing.github.io/theme/js/tagcloud.min.js"></script>
+    <script type="text/javascript">
+var tc = TagCloud.create();
+tc.add('smarteredu', 2, 'http://jacksing.github.io/tag/smarteredu.html', null);
+tc.add('python', 2, 'http://jacksing.github.io/tag/python.html', null);
+tc.add('aws', 1, 'http://jacksing.github.io/tag/aws.html', null);
+tc.add('music', 1, 'http://jacksing.github.io/tag/music.html', null);
+tc.add('linux', 1, 'http://jacksing.github.io/tag/linux.html', null);
+tc.add('edx', 5, 'http://jacksing.github.io/tag/edx.html', null);
+tc.loadEffector('CountSize');tc.loadEffector('CountSize');
+
+function tag_filter() {
+  tc.searchAndDisplay('niu2-tagcloud', $('#niu2-tagcloud-filter-input').val());
+  return false;
+}
+tc.setup('niu2-tagcloud');
+</script>
   </body>
 </html>
