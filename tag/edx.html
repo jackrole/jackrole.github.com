@@ -46,6 +46,76 @@
         
 
             <article>
+                <a href="/open-edx-jian-dan-ke-cheng-jian-suo-api.html"><h3 class="article-title">Open edX 简单课程检索API</h3></a>
+<h6 class="subheader" title="2015-03-12T00:00:00+08:00">四 12 三月 2015
+</h6>
+
+
+<h4>添加courses/search/的api</h4>
+<p><strong>lms/urls.py 添加地址配置</strong></p>
+<div class="highlight"><pre>url(r&#39;^courses/search/$&#39;, &#39;branding.views.search_courses&#39;, name=&quot;search_courses&quot;)
+</pre></div>
+
+
+<p><strong>lms/djangoapps/branding/views.py 添加函数</strong></p>
+<div class="highlight"><pre>def search_courses(request):
+    return courseware.views.search_courses(request)
+</pre></div>
+
+
+<p><strong>lms/djangoapps/courseware/views.py 添加函数</strong></p>
+<div class="highlight"><pre>def search_courses(request):
+    &quot;&quot;&quot;
+    Search specified courses, and return them in json format.
+    &quot;&quot;&quot;
+    courses = get_courses(request.user, request.META.get(&#39;HTTP_HOST&#39;))
+    courses = sort_by_announcement(courses)
+
+    offset = request.GET.get(&#39;offset&#39;)
+    if offset and offset.isdigit():
+        offset = long(offset)
+    else:
+        offset = 0
+
+    limit = request.GET.get(&#39;limit&#39;)
+    if limit and limit.isdigit():
+        limit = long(limit) + offset
+
+    if offset or limit:
+        courses = courses[offset:limit]
+
+    courses_json = [
+        {
+            &#39;about_course&#39;: reverse(&#39;about_course&#39;, args=[course.id.to_deprecated_string()]),
+            &#39;display_number_with_default&#39;: course.display_number_with_default,
+            &#39;is_newish&#39;: course.is_newish,
+            &#39;short_description&#39;: get_course_about_section(course, &#39;short_description&#39;),
+            &#39;course_image_url&#39;: course_image_url(course),
+            &#39;start_date_is_still_default&#39;: course.start_date_is_still_default,
+            &#39;start_datetime_text&#39;: course.start_datetime_text(),
+            &#39;title&#39;: get_course_about_section(course, &#39;title&#39;),
+            &#39;university&#39;: get_course_about_section(course, &#39;university&#39;),
+        } for course in courses
+    ]
+    return HttpResponse(cgi.escape(json.dumps(courses_json)))
+</pre></div><p class="subheader">Category: <a href="/category/develop.html">develop</a>
+
+    Tagged: 
+    <a href="/tag/edx.html">edx </a>
+</p>
+
+
+
+            </article>
+
+
+                <hr  class="gradient"/>
+
+
+        
+
+
+            <article>
                 <a href="/edx-platformzhong-ge-ge-she-zhi-wen-jian-de-guan-xi.html"><h3 class="article-title">edx-platform中各个设置文件的关系</h3></a>
 <h6 class="subheader" title="2015-03-11T00:00:00+08:00">三 11 三月 2015
 </h6>
@@ -81,28 +151,7 @@ edx-platform/cms/envs/common.py
 edx-platform/cms/envs/aws.py
 ↓↓
 
-edx-platform/cms/envs/devstack.py
-</pre></div>
-
-
-<h1>dev.py</h1>
-<p>lms中引用关系</p>
-<div class="highlight"><pre>edx-platform/lms/envs/common.py
-↓↓
-
-edx-platform/lms/envs/dev.py
-</pre></div>
-
-
-<p>cms中引用关系</p>
-<div class="highlight"><pre>edx-platform/lms/envs/common.py
-↓↓
-
-edx-platform/cms/envs/common.py
-↓↓
-
-edx-platform/cms/envs/dev.py
-</pre></div><p class="subheader">Category: <a href="/category/develop.html">develop</a>
+edx-platform/cms/envs/devstack.py ...</pre></div><p class="subheader">Category: <a href="/category/develop.html">develop</a>
 
     Tagged: 
     <a href="/tag/edx.html">edx </a>
@@ -110,11 +159,9 @@ edx-platform/cms/envs/dev.py
 
 
 
-            </article>
-
-
+                <a class="button radius secondary small right" href="/edx-platformzhong-ge-ge-she-zhi-wen-jian-de-guan-xi.html">Read More</a>
                 <hr  class="gradient"/>
-
+            </article>
 
         
 
@@ -219,7 +266,7 @@ password=&lt;your password&gt;
 
 
             <article>
-                <a href="/openedx-she-zhi-smtpfa-song-you-jian.html"><h3 class="article-title">OpenEdx 设置smtp发送邮件</h3></a>
+                <a href="/open-edx-she-zhi-smtpfa-song-you-jian.html"><h3 class="article-title">Open edX 设置smtp发送邮件</h3></a>
 <h6 class="subheader" title="2015-02-26T00:00:00+08:00">四 26 二月 2015
 </h6>
 
@@ -251,7 +298,7 @@ sudo vi /edx/app/edxapp/lms.auth.json ...</pre></div><p class="subheader">Catego
 
 
 
-                <a class="button radius secondary small right" href="/openedx-she-zhi-smtpfa-song-you-jian.html">Read More</a>
+                <a class="button radius secondary small right" href="/open-edx-she-zhi-smtpfa-song-you-jian.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
