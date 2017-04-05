@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmarterEdu之广传之秘 - ☆挑灯乄观星☆</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+    <link rel="stylesheet" href="http://jackrole.github.io/theme/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://jackrole.github.io/theme/font-icons/style.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://jackrole.github.io/theme/css/niu2.min.css" type="text/css" />
+
+    <link rel="canonical" href="http://jackrole.github.io/develop/smartereduzhi-yan-chuan-zhi-mi.html" />
+    
+    <script type="text/javascript">window.onload=function(){};</script>
+    <!--[if lt IE 9]>
+        <script src="http://jackrole.github.io/theme/js/html5shiv.js"></script>
+        <script src="http://jackrole.github.io/theme/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body> 
+    <div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://jackrole.github.io">
+            <i class="icon-home"></i>☆挑灯乄观星☆
+        </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+            <li><a href="http://smarteredu.org" title="smarteredu">
+                <i class="icon-rocket"></i>SmarterEdu</a>
+            </li>
+            <li><a href="/tag/" title="tags">
+                <i class="icon-tag"></i>标签</a>
+            </li>
+        <!-- category dropdown list -->
+        <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-folder-open"></i>分类<b class="caret"></b>
+           </a>
+           <ul class="dropdown-menu">
+               <li><a href="http://jackrole.github.io/art/index.html">
+                      <i class="icon-coffee"></i>日常
+                      (1)</a></li>
+               <li><a href="http://jackrole.github.io/collection/index.html">
+                      <i class="icon-briefcase"></i>搜藏
+                      (2)</a></li>
+               <li><a href="http://jackrole.github.io/develop/index.html">
+                      <i class="icon-code"></i>开发
+                      (8)</a></li>
+               <li><a href="http://jackrole.github.io/note/index.html">
+                      <i class="icon-book"></i>笔记
+                      (1)</a></li>
+           </ul>
+        </li>
+        <!--  self defined dropdown list -->
+        <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               <i class="icon-archive"></i>存档<b class="caret"></b>
+           </a>
+           <ul class="dropdown-menu">
+               <li><a href="/archives.html" title="archives order by publish time">
+                 <i class="icon-calendar"></i>存档 (按发布时间)</a>
+               </li>
+               <li><a href="/archives_updatedate.html" title="archives order by modify time">
+                 <i class="icon-pencil"></i>存档 (按修改时间)</a>
+               </li>
+           </ul>
+        </li>
+        </ul>
+        
+        <!-- right nav bar -->
+        <ul class="nav navbar-nav navbar-right">
+        <!-- google custom search -->
+       </ul>
+    </nav>
+</div>
+</div>    </div>
+    
+    <div id="body-content">
+<div class="col-md-8 col-md-offset-2">
+    <h1 id="content-heading">SmarterEdu之广传之秘</h1>
+</div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2 with-right-border">
+    <div id="niu2-main-content">
+        <h1 id="1510ec">总则:欲练此功、抱腿度娘、委身谷哥</h1>
+<h1 id="684fe5">一、环境安装</h1>
+<ol>
+<li>
+<p>安装Open edX</p>
+<p><a href="https://github.com/edx/configuration/wiki/edX-Developer-Stack">https://github.com/edx/configuration/wiki/edX-Developer-Stack</a></p>
+</li>
+</ol>
+<p>安装时可能会遇到某些包暂时下载不成功，碰到这种情况一般只要再次尝试执行安装命令的最后一句<code>vagrant up</code>直至安装完成即可。</p>
+<ol>
+<li>
+<p>Developing on the edX Developer Stack</p>
+<p><a href="https://github.com/edx/edx-platform/wiki/Developing-on-the-edX-Developer-Stack">https://github.com/edx/edx-platform/wiki/Developing-on-the-edX-Developer-Stack</a></p>
+</li>
+<li>
+<p>配置Pycharm</p>
+<p><a href="https://github.com/edx/edx-platform/wiki/Setting-up-PyCharm-for-edX-development">https://github.com/edx/edx-platform/wiki/Setting-up-PyCharm-for-edX-development</a></p>
+</li>
+<li>
+<p>安装smartERproject (<strong>smartERproject整合到edx-platform的操作流程</strong>)</p>
+<p><a href="https://github.com/SMARTEDU/smarter-edx">smartERproject</a>在github上的目录对应上一步骤安装好的Open edX的<code>/edx/app/edxapp/</code>，即pycharm环境中的<code>devstack</code>目录。</p>
+<p>a. 签出<a href="https://github.com/SMARTEDU/smarter-edx">smartERproject</a>项目到/edx/app/edxapp/目录中。</p>
+<p><img alt="image" src="屏幕快照" title="2016-01-12 下午2.03.47.png"/></p>
+<p>b. github上，smartERproejct的<a href="https://github.com/SMARTEDU/smarter-edx/tree/master/edx-platform/lms">lms</a>和<a href="https://github.com/SMARTEDU/smarter-edx/tree/master/edx-platform/cms">cms</a>两个目录下的文件需要对照最新安装的Open edX，将需要的内容Merge到本地调试环境中。</p>
+<pre><code>`有些文件加了.jacsi后缀名，这些文件也是需要的，去掉后缀名后即是这个文件所对应的文件。`
+
+例如：[edx-platform/lms/djangoapps/courseware/views.py.jacsi](https://github.com/SMARTEDU/smarter-edx/blob/master/edx-platform/lms/djangoapps/courseware/views.py.jacsi)
+
+对应：edx-platform/lms/djangoapps/courseware/views.py 这个文件
+
+然后搜索view.py.jacsi中`jacksing`、`wufeng`字样的代码，Merge到最新的本地环境的views.py中，直至[lms](https://github.com/SMARTEDU/smarter-edx/tree/master/edx-platform/lms)和[cms](https://github.com/SMARTEDU/smarter-edx/tree/master/edx-platform/cms)两个目录中的所有类似文件全部Merge完成。
+</code></pre>
+<p>c. 设置edx-platform/lms/urls.py</p>
+<pre><code>添加以下设置：
+
+    try:
+        urlpatterns += (
+            url(r'^smarteredu/', include('edx_if.urls_lms')),
+        )
+    except ImportError:
+        pass
+</code></pre>
+<p>d. 设置edx-platform/cms/urls.py</p>
+<pre><code>添加以下设置：
+
+    try:
+        urlpatterns += (
+            url(r'^smarteredu/', include('edx_if.urls_cms')),
+        )
+    except ImportError:
+        pass
+</code></pre>
+<p>e. 注意edx-platform/cms/smartERproject/smartERproject/settings.py</p>
+<pre><code>这个目录里的设置，这里的设置可能因为目录的移动，产生设定值的变化。
+
+如：DEBUG，会因为系统的不同而不同。
+</code></pre>
+<p>f. 注意edX和smartERproject使用的django版本不同，会导致一些包里的函数不同。</p>
+<pre><code>如：edx-platform/cms/smartERproject/smarteredu/course/models.py
+这里面的class SEModel()的save()函数中，调用的django模型的save函数的参数个数是不同的。
+
+    django1.7（smartERproject）
+       super(SEModel, self).save(force_insert, force_update, using, update_fields)
+    django1.4（edx-platform）
+       super(SEModel, self).save(force_insert, force_update, using)
+</code></pre>
+</li>
+<li>
+<p>同步数据库</p>
+<pre><code># 登录虚拟机
+vagrant ssh
+
+sudo -H -u edxapp bash
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+./manage.py lms syncdb --migrate --settings=smarterdev
+
+./manage.py lms syncdata --settings=smarterdev
+</code></pre>
+</li>
+<li>
+<p>运行debug环境</p>
+</li>
+</ol>
+<p>本地的调试环境使用以下两个配置文件进行DEBUG，</p>
+<pre><code>   edx-platform/lms/envs/smarterdev.py
+   edx-platform/cms/envs/smarterdev.py
+</code></pre>
+<p>所以运行时参数替换成以下两个（在pycharm中使用）</p>
+<pre><code>    lms runserver --settings=smarterdev 0.0.0.0:8000
+    cms runserver --settings=smarterdev 0.0.0.0:8001
+
+![image](屏幕快照 2016-01-12 下午1.17.01.png)
+</code></pre>
+<p><code>如没特别说明，下述内容中出现的路径均在环境安装完成后的/edx/app/edxapp/目录下</code></p>
+<h1 id="e9aba2">二、项目结构</h1>
+<p>Open edX基于Django框架，所有内容的结构基本按照Django的结构构成。相应内容均可参照Django结构找到所需内容。以下将有别与基本Django的目录以及一些重要文件作出说明。</p>
+<h2 id="0a476b">各个设置文件之间的关系</h2>
+<hr/>
+<p>环境中有诸多的设置文件，下面简略整理了下它们之间的联系。</p>
+<p>edx-platform在lms和cms下各有一套设定，位于下面两个目录：</p>
+<pre><code>edx-platform/cms/envs/
+edx-platform/lms/envs/
+</code></pre>
+<p><strong>cms中引用关系</strong></p>
+<pre><code>edx-platform/lms/envs/common.py
+↓↓
+
+edx-platform/cms/envs/common.py
+↓↓
+
+edx-platform/cms/envs/aws.py
+↓↓
+
+edx-platform/cms/envs/devstack.py
+↓↓
+
+edx-platform/cms/envs/smarterdev.py
+</code></pre>
+<p><strong>lms中引用关系</strong></p>
+<pre><code>edx-platform/lms/envs/common.py
+↓↓
+
+edx-platform/lms/envs/aws.py
+↓↓
+
+edx-platform/lms/envs/devstack.py
+↓↓
+
+edx-platform/lms/envs/smarterdev.py
+</code></pre>
+<p><code>本地调试环境中使用是smarterdev.py，这里面有smartERproject所使用的各个设置。代码上传到服务器后，请将smarterdev.py中的内容移到同级目录下的aws.py中。（服务器使用的是aws.py）</code></p>
+<h2 id="08a4d1">Open edX固有目录结构</h2>
+<hr/>
+<p>环境配置文件</p>
+<pre><code>env.cms.json
+env.lms.json
+</code></pre>
+<p>主要的课程管理视图放在以下文件中：</p>
+<pre><code>edx-platform/cms/djangoapps/contentstore/views/course.py
+</code></pre>
+<p>课程模型放在以下路径：</p>
+<pre><code>edx-platform/cms/djangoapps/models/settings/course_details.py    课程的主信息，包括课程的保存
+edx-platform/cms/djangoapps/models/settings/course_grading.py
+edx-platform/cms/djangoapps/models/settings/course_metadata.py
+</code></pre>
+<p>课程存储模型，该模型调用xml，mongo，split mongo等底层数据库模块</p>
+<pre><code>edx-platform/common/lib/xmodule/xmodule/modulestore/mixed.py
+-&gt; ModuleStore knows how to route requests to the right persistence ms
+</code></pre>
+<p>lms中课程显示的时候，用来取得或者格式化课程内容的模块</p>
+<pre><code>edx-platform/lms/djangoapps/courseware/courses.py
+</code></pre>
+<p>语言包放置路径</p>
+<pre><code>edx-platform/conf/
+</code></pre>
+<p>Log放置路径</p>
+<pre><code>/edx/var/log/lms/edx.log
+/edx/var/log/cms/edx.log
+</code></pre>
+<h3 id="9c00fa">学生模块</h3>
+<pre><code>edx-platform/common/djangoapps/student/
+</code></pre>
+<p><strong>edx-platform/common/djangoapps/student/views.py</strong></p>
+<ul>
+<li><code>login_user()</code></li>
+</ul>
+<p>学生用户登录的功能。</p>
+<ul>
+<li><code>_do_create_account()</code></li>
+</ul>
+<p>用户注册，机构／老师／学生，此处根据用户注册时的分类分配用户角色。</p>
+<pre><code>  机构／老师注册页面显示在此处：
+      edx-platform/cms/djangoapps/contentstore/views/public.py
+      -&gt; signup()
+</code></pre>
+<ul>
+<li><code>index()</code></li>
+</ul>
+<p>首页内容显示，分别从课程／机构／老师模块获得推荐的内容，并显示的首页上。</p>
+<ul>
+<li><code>dashboard()</code></li>
+</ul>
+<p>学生dashboard页面，展示学生注册的各类课程。注册课程后跳转时，可根据注册课程的分类现实默认的Tab页。</p>
+<ul>
+<li><code>change_enrollment()</code></li>
+</ul>
+<p>学生课程注册，决定各门课程注册后的状态。（免费、收费、待确认等）</p>
+<p><strong>edx-platform/common/djangoapps/student/models.py</strong></p>
+<ul>
+<li><code>CourseEnrollmentSummary</code></li>
+</ul>
+<p>包含online／offline两种课程的注册信息类。在Open edX原注册类的扩展，添加了支付相关的功能。</p>
+<ul>
+<li><code>CourseEnrollment</code></li>
+</ul>
+<p>online课程的注册信息类，完全继承CourseEnrollmentSummary类，代表Open edX的原注册类。</p>
+<ul>
+<li><code>UserProfile</code></li>
+</ul>
+<p>用户信息类，具有修改用户练习电话功能。<code>新版本Open edX上UserProfile已有较大改动</code></p>
+<ul>
+<li><code>enforce_single_login()</code></li>
+</ul>
+<p>单用户登录。</p>
+<h3 id="d810fe">课件模块</h3>
+<pre><code>edx-platform/lms/djangoapps/courseware/
+</code></pre>
+<p><strong>edx-platform/lms/djangoapps/courseware/views.py</strong></p>
+<ul>
+<li><code>course_info()</code></li>
+</ul>
+<p>课程信息页面（用户已注册状态）。限制无权限（未付费／未确认，etc）用户访问online课程。</p>
+<ul>
+<li><code>course_about()</code></li>
+</ul>
+<p>课程浏览页面（未登录状态也可查看的online课程注册页面）。控制登录用户的课程注册状态。</p>
+<ul>
+<li><code>search_courses()</code></li>
+</ul>
+<p>smartERproject老版本的搜索页面。只限于搜索online课程。</p>
+<h3 id="dc0ea6">课程内容模块</h3>
+<pre><code>edx-platform/cms/djangoapps/contentstore/views/
+</code></pre>
+<p><strong>edx-platform/cms/djangoapps/contentstore/views/course.py</strong></p>
+<ul>
+<li><code>course_listing()</code></li>
+</ul>
+<p>online课程列表。如果还为录入机构或老师信息的话（分别相对于机构帐号和老师帐号而言），页面将重定向到profile页面。</p>
+<ul>
+<li><code>_create_new_course()</code></li>
+</ul>
+<p>Open edX的创建online课程接口。此处插入了将online课程信息导入MySQL的接口，方便smartERproject统一管理offline和online课程。</p>
+<ul>
+<li><code>settings_handler()</code></li>
+</ul>
+<p>cms侧online课程Settings功能所对应的后台处理。smartERproject<code>主要的online课程信息处理接口</code>也都在此处。</p>
+<ul>
+<li><code>advanced_settings_handler()</code></li>
+</ul>
+<p>cms侧online课程Advanced Settings功能所对应的后台处理。修改online课程的Display Name时此处与MySQL同步。</p>
+<h2 id="83dbe3">smartERproject目录结构</h2>
+<hr/>
+<p>所有的代码放置在下列目录中，包括后台、前台（python、js、html，etc）</p>
+<pre><code>edx-platform/common/smartERproject/
+</code></pre>
+<p><strong>模版</strong></p>
+<pre><code>edx-platform/common/smartERproject/templates/
+    ./cms    --cms侧
+    ./common    --共同模版，目前只有FAQs和几个弹出式的Message页面放在其中
+    ./lms    --lms侧
+</code></pre>
+<p><strong>python库</strong></p>
+<pre><code>edx-platform/common/smartERproject/smarteredu/
+    ./community/    --Useful Resource和News等社区内容
+    ./course/    --课程
+    ./data/    --master数据，学科分类、抓取的机构信息等
+    ./institution/    --机构
+    ./keyin/    --cms侧所有的录入功能
+    ./teacher/    --老师
+</code></pre>
+<p><strong>静态资源</strong></p>
+<pre><code>edx-platform/common/smartERproject/static/common/
+edx-platform/common/smartERproject/static_lms/
+edx-platform/common/smartERproject/static_cms/
+</code></pre>
+<p><strong>主题包</strong></p>
+<pre><code>themes/smarteredu/
+    ./smarteredu/static/images/favicon.ico    --用于浏览器Tab上显示的小Logo
+    ./templates/theme-header.html    --设置系统的Logo
+</code></pre>
+<p><strong>清除smartERproject生成的所有表</strong></p>
+<pre><code>执行该文件中的SQL将清除smartERproject的表，以方便重新生成表
+edx-platform/common/smartERproject/clear_table
+</code></pre>
+<h1 id="1949f8">三、业务逻辑</h1>
+<h2 id="025c31">综合说明</h2>
+<hr/>
+<ul>
+<li>
+<p>smartERproject（不含Open edX）目前主要分机构／老师／课程三块逻辑，分别是institution/teacher/course三个包。lms侧的查询、获得推荐课程、用户对于课程的使用权限检查等分别由这三者的view视图负责。</p>
+</li>
+<li>
+<p>机构／老师／课程的录入由keyin包负责，包括所有cms侧录入页面显示、后台数据登录、用户录入权限检查等功能。</p>
+<p>用户录入权限，即basic institution、standard institution、premium instituion三种机构包套餐、和basic teacher、standard teacher、premium teacher三种老师包套餐各自所能录入的信息数量的Check。</p>
+<p>机构／老师可以进行basic -&gt; standard、basic -&gt; premium、standard -&gt; premium升级的操作，目前(2015/1/13)只实现了机构的升级功能。</p>
+</li>
+</ul>
+<h2 id="a7ca3f">主要表的裙带关系</h2>
+<hr/>
+<p><strong>直接上图</strong></p>
+<p><img alt="image" src="屏幕快照" title="2016-01-21 下午1.50.28.png"/></p>
+<h2 id="94419a">功能点说明</h2>
+<hr/>
+<h3 id="af7d54"><code>appauth</code></h3>
+<p><strong>edx-platform/common/smartERproject/smarteredu/appauth/</strong></p>
+<ol>
+<li>
+<p>第三方注册／第三方登录(QQ、Facebook)</p>
+<pre><code>app_register()
+app_login()
+qq_login()
+facebook_login()
+</code></pre>
+</li>
+<li>
+<p>机构、老师升级／设置用户联系电话</p>
+<pre><code>upgrade_to_premium()
+change_telephone()
+</code></pre>
+</li>
+</ol>
+<h3 id="9efab2"><code>common</code></h3>
+<p><strong>edx-platform/common/smartERproject/smarteredu/common/</strong></p>
+<ol>
+<li>
+<p>获得站内所有学科分类／所有地区列表</p>
+<pre><code>get_main_category()
+get_main_district()
+</code></pre>
+</li>
+<li>
+<p>smartERproject所有数据模型的基类／以及共同的Master数据模型／分类主表</p>
+<pre><code>SEModel
+SEMoocSite
+SEDistrict
+SERace
+SESmarterCategory
+</code></pre>
+</li>
+</ol>
+<h3 id="82df41"><code>community</code></h3>
+<p><strong>edx-platform/common/smartERproject/smarteredu/community/</strong></p>
+<p>社区模块，目前Userful Resource和Latest News两块功能集中在此，未来社区相关的功能将放在这里实现。</p>
+<h3 id="046d47"><code>course</code></h3>
+<p><strong>edx-platform/common/smartERproject/smarteredu/course/</strong></p>
+<ol>
+<li>
+<p>课程检索页面／检索接口</p>
+<pre><code>search_board()
+search()
+</code></pre>
+</li>
+<li>
+<p>获取首页推荐课程</p>
+<pre><code>get_recommended()
+</code></pre>
+</li>
+<li>
+<p>课程页面（学生浏览页面）</p>
+<pre><code>profile()
+</code></pre>
+</li>
+<li>
+<p>用户注册课程／老师管理注册状态／获取用户注册状态</p>
+<pre><code>change_enrollment()
+manage_enrollment()
+users_enrolled_in()
+</code></pre>
+</li>
+<li>
+<p>学生学习时间采集／学生学习时间统计／学生学习时间导出</p>
+<pre><code>student_workload()
+query_student_workload()
+query_workload_excel()
+</code></pre>
+</li>
+<li>
+<p>获得机构下所有课程／获得老师下所有课程</p>
+<pre><code>get_course_of_institution()
+get_course_of_instructor()
+</code></pre>
+</li>
+<li>
+<p>Paypal付费完成回调</p>
+<pre><code>_payment_cleared()
+</code></pre>
+</li>
+</ol>
+<h3 id="955bff"><code>institution</code></h3>
+<p><strong>edx-platform/common/smartERproject/smarteredu/institution/</strong></p>
+<ol>
+<li>
+<p>机构检索页面／检索接口</p>
+<pre><code>search_board()
+search()
+</code></pre>
+</li>
+<li>
+<p>获取首页推荐机构</p>
+<pre><code>get_recommended()
+</code></pre>
+</li>
+<li>
+<p>机构页面（学生浏览页面）</p>
+<pre><code>profile()
+</code></pre>
+</li>
+<li>
+<p>获得机构下学生可见课程／获得机构下学生可见老师</p>
+<pre><code>get_course_of_institution()
+get_instructor_of_institution()
+</code></pre>
+</li>
+</ol>
+<h3 id="8d7883"><code>teacher</code></h3>
+<p><strong>edx-platform/common/smartERproject/smarteredu/teacher/</strong></p>
+<ol>
+<li>
+<p>老师检索页面／检索接口</p>
+<pre><code>search_board()
+search()
+</code></pre>
+</li>
+<li>
+<p>获取首页推荐老师</p>
+<pre><code>get_recommended()
+</code></pre>
+</li>
+<li>
+<p>老师页面（学生浏览页面）</p>
+<pre><code>profile()
+</code></pre>
+</li>
+<li>
+<p>获得老师下学生可见课程</p>
+<pre><code>get_course_of_instructor()
+</code></pre>
+</li>
+</ol>
+<h3 id="368535"><code>keyin</code></h3>
+<p><strong>edx-platform/common/smartERproject/smarteredu/keyin/</strong></p>
+<ol>
+<li>
+<p>cms侧dashboard页面</p>
+<pre><code>views.dashboard()
+</code></pre>
+</li>
+<li>
+<p>机构的基本信息录入页面／老师的基本信息录入页面</p>
+<pre><code>views.profile_handler()
+</code></pre>
+<p><code>同一个view函数，根据用户类型显示机构或者老师的信息录入页面</code></p>
+</li>
+<li>
+<p>老师管理页面（只对机构有效）／课程管理页面／老师删除（只对机构有效）／课程删除</p>
+<pre><code>views.instructor_list_handler()
+views.course_list_handler()
+views.delete_instructor()
+views.delete_course()
+</code></pre>
+</li>
+<li>
+<p>用户录入权限</p>
+<p>access.py中设置各个套餐下的用户可录入内容的范围。</p>
+<p><code>OFFLINE_LIMIT_RULE</code></p>
+<p><code>ONLINE_LIMIT_RULE</code></p>
+<p><code>COP_USERS</code> <strong><code>这里设置的是具有额外录入权限的老用户，他们能录入的内容比最新用户要多。</code></strong></p>
+</li>
+</ol>
+<h2 id="bfbd61">接口说明</h2>
+<hr/>
+<p><strong>获得站内所有机构、老师和课程的学科分类</strong></p>
+<p>HTTP REQUEST</p>
+<pre><code>GET http://example.com/smarteredu/search/api/category/
+</code></pre>
+<p>URL PARAMETERS</p>
+<pre><code>NULL
+</code></pre>
+<p><strong>检索机构信息</strong></p>
+<p>HTTP REQUEST</p>
+<pre><code>GET http://example.com/smarteredu/search/api/institution/
+</code></pre>
+<p>URL PARAMETERS</p>
+<pre><code>a            Integer    学科一级分类
+b            Integer    学科二级分类
+c            Integer    学科三级分类
+name         String     精确查询机构名
+fuzzy_name   String     模糊查询机构名
+wd           String     查询机构的名字、分类、简介等中的关键字
+d            Integer    查询地区
+order        Integer    排序
+</code></pre>
+<p><strong>检索老师信息</strong></p>
+<p>HTTP REQUEST</p>
+<pre><code>GET http://example.com/smarteredu/search/api/instructor/
+</code></pre>
+<p>URL PARAMETERS</p>
+<pre><code>a            Integer    学科一级分类
+b            Integer    学科二级分类
+c            Integer    学科三级分类
+name         String     精确查询老师名
+fuzzy_name   String     模糊查询老师名
+wd           String     查询老师的名字、分类、简介等中的关键字
+d            Integer    查询地区
+r            Integer    查询民族
+order        Integer    排序
+</code></pre>
+<p><strong>检索课程信息</strong></p>
+<p>HTTP REQUEST</p>
+<pre><code>GET http://example.com/smarteredu/search/api/course/
+</code></pre>
+<p>URL PARAMETERS</p>
+<pre><code>a            Integer    学科一级分类
+b            Integer    学科二级分类
+c            Integer    学科三级分类
+name         String     精确查询课程名
+fuzzy_name   String     模糊查询课程名
+wd           String     查询课程的名字、分类、简介等中的关键字
+lang         Integer    课程语言
+approach     Integer    教学方式
+pt           String     线上／线上区分
+price        Integer    收费／免费区分
+</code></pre>
+<p><strong>查询学生学习时间</strong></p>
+<p>HTTP REQUEST</p>
+<pre><code>GET http://example.com/smarteredu/course/workload/
+</code></pre>
+<p>URL PARAMETERS</p>
+<pre><code>course_key   String     课程ID
+</code></pre>
+<h1 id="aff8dd">四、环境配置</h1>
+<h2 id="c5fa74">lms.env.json</h2>
+<hr/>
+<ul>
+<li>
+<p>PLATFORM_NAME, 站名</p>
+<p>"PLATFORM_NAME": "SmarterEdu"</p>
+</li>
+<li>
+<p>Mail相关的项目邮件服务器全部设置成smarteredu.org，如</p>
+<p>"CONTACT_EMAIL": "info@smarteredu.org"</p>
+</li>
+<li>
+<p>LMS_BASE，获取lms域名的地方会用到该设置</p>
+<p>"LMS_BASE": "www.smarteredu.org"</p>
+</li>
+<li>
+<p>CMS_BASE、STUDIO_URL设置成cms侧域名，lms链接到cms时会使用该设置</p>
+<p>"CMS_BASE": "www.smarteredu.org:18010"
+  "STUDIO_URL": "www.smarteredu.org:18010"</p>
+</li>
+<li>
+<p>THEME_NAME，主题包设置</p>
+<p>"THEME_NAME": "smarteredu"</p>
+</li>
+</ul>
+<h2 id="375c6b">cms.env.json</h2>
+<hr/>
+<ul>
+<li>
+<p>PLATFORM_NAME, 站名</p>
+<p>"PLATFORM_NAME": "SmarterEdu"</p>
+</li>
+<li>
+<p>Mail相关的项目邮件服务器全部设置成smarteredu.org，如</p>
+<p>"CONTACT_EMAIL": "info@smarteredu.org"</p>
+</li>
+<li>
+<p>CMS_BASE，获取cms域名的地方会用到该设置</p>
+<p>"CMS_BASE": "www.smarteredu.org:18010"</p>
+</li>
+<li>
+<p>LMS_BASE、PREVIEW_LMS_BASE设置成lms侧域名，cms侧预览课程内容等时候会用到这些设置</p>
+<p>"FEATURES": {
+    "PREVIEW_LMS_BASE": "www.smarteredu.org"
+  }
+  "LMS_BASE": "www.smarteredu.org"</p>
+</li>
+</ul>
+<h2 id="2c1770">用户注册系统，关于激活邮件的发送</h2>
+<hr/>
+<p>激活邮件的发送应该是使用django自带的邮件发送模块进行发送的。
+/edx/app/edxapp/lms.env.json 中设置了以下环境设定</p>
+<pre><code>EMAIL_BACKEND
+EMAIL_HOST
+EMAIL_PORT
+</code></pre>
+<p><strong>/edx/app/edxapp/lms.auth.json</strong> 中放置了以下环境设定</p>
+<pre><code>EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD
+</code></pre>
+<p>而以上5个激活邮箱的设定都会在edx代码<strong>edx-platform/lms/envs/aws.py</strong>中读取使用。</p>
+<h3 id="92bda0">邮件激活功能具体设置方法：</h3>
+<p>1）配置发件服务器地址和端口</p>
+<pre><code>sudo vi /edx/app/edxapp/cms.env.json
+sudo vi /edx/app/edxapp/lms.env.json
+</code></pre>
+<p>在以上2个文件里设置</p>
+<pre><code>"EMAIL_HOST": "mail.bistu.edu.cn",
+"EMAIL_PORT": 25,
+"EMAIL_USE_TLS": true,
+"SITE_NAME": "这里设置你的域名，将会影响到激活地址的域名",
+</code></pre>
+<p>2）配置发件账号和密码</p>
+<pre><code>sudo vi /edx/app/edxapp/cms.auth.json
+sudo vi /edx/app/edxapp/lms.auth.json
+</code></pre>
+<p>在以上2个文件里设置</p>
+<pre><code>"EMAIL_HOST_USER": "*****",
+"EMAIL_HOST_PASSWORD":"*****",
+</code></pre>
+<p>3）确认无误，重启edxapp</p>
+<pre><code>sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp:
+sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp_worker:
+</code></pre>
+<h2 id="5dd4c3">开启oauth2授权</h2>
+<hr/>
+<p><strong>/edx/app/edxapp/edx-platform/lms/envs/common.py</strong></p>
+<pre><code>'ENABLE_OAUTH2_PROVIDER': True,
+</code></pre>
+<p>基于oauth2.0的API使用</p>
+<p>获取access_token</p>
+<p>地址：<code>http://hostname/oauth2/access_token/</code></p>
+<p>方法：POST</p>
+<p>参数：</p>
+<pre><code>client_id=852d5804ba5c15867d80
+client_secret=10cef9e7fbe3b64ac684590f45ac77704fef4980
+grant_type=password
+username=&lt;staff@example.com&gt;
+password=&lt;edx&gt;
+</code></pre>
+<p>返回：</p>
+<pre><code>{
+  "access_token": "1b159861c3b1c6f4554c2a71168273433ea154dd", 
+  "token_type": "Bearer", 
+  "expires_in": 2591999, 
+  "scope": ""
+}
+</code></pre>
+<p>这里的<code>access_token</code>下面在HEADER中用</p>
+<p>获取用户信息／获取用户注册课程／等</p>
+<p>所有的端口：<a href="http://edx-platform-api.readthedocs.org/en/latest/endpoints.html">http://edx-platform-api.readthedocs.org/en/latest/endpoints.html</a></p>
+<p>地址：</p>
+<pre><code>获取用户信息
+http://hostname/api/mobile/v0.5/users/staff
+获取用户注册课程
+http://hostname/api/mobile/v0.5/users/staff/course_enrollments/
+</code></pre>
+<p>方法：GET</p>
+<p>HEADER：</p>
+<pre><code>Authorization: Bearer 1b159861c3b1c6f4554c2a71168273433ea154dd
+</code></pre>
+<h2 id="0ee8f1">国际化设置</h2>
+<hr/>
+<p><strong><code>cms.env.json</code></strong>
+<strong><code>lms.env.json</code></strong></p>
+<pre><code>"LANGUAGE_CODE": "zh-cn",     edx国际化语言设置
+"PLATFORM_NAME": “SmarterEdu",     edx平台名设置
+</code></pre>
+<p><strong>edx国际化，用户语言设置表<code>edxapp.user_api_userpreference</code></strong></p>
+<p>语言的显示：未登录状态下首先检查用户浏览器的语言设置; 用户登录后，查看上述表中用户的语言设置。</p>
+<h1 id="4f7814">五、常用命令</h1>
+<blockquote>
+<p>本地的调试环境，由于使用了<code>smarterdev.py</code>这个配置文件，所以参数中使用<code>--settings=smarterdev</code>，在aws服务器上使用<code>aws.py</code>，所以在参数中使用<code>--settings=aws</code>。</p>
+</blockquote>
+<p><code>重启服务器</code></p>
+<pre><code>sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp:
+sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp_worker:
+</code></pre>
+<p><code>删除mongo的lock文件</code></p>
+<pre><code>sudo rm /edx/var/mongo/mongodb/mongod.lock
+sudo mongod -repair --config /etc/mongod.conf
+sudo chown -R mongodb:mongodb /edx/var/mongo/.
+sudo /etc/init.d/mongod start
+</code></pre>
+<p>If using a pre-lavash version of devstack, do this instead:</p>
+<pre><code>sudo rm /edx/var/mongo/mongodb/mongod.lock
+sudo mongod -repair --config /etc/mongodb.conf
+sudo chown -R mongodb:mongodb /edx/var/mongo/mongo/.
+sudo start mongodb
+</code></pre>
+<p><code>同步lms的数据库</code></p>
+<pre><code>sudo -H -u edxapp bash
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+./manage.py lms syncdb --migrate --settings=smarterdev
+</code></pre>
+<p><code>同步studio的数据库</code></p>
+<pre><code>sudo -H -u edxapp bash
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+./manage.py cms syncdb --migrate --settings=smarterdev
+</code></pre>
+<p><code>同步lms的smartERproject数据</code>    --不常用，除非新装环境需要导入smartERproject的master数据时</p>
+<pre><code>sudo -H -u edxapp bash
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+./manage.py lms syncdata --settings=smarterdev
+</code></pre>
+<p><code>同步cms的smartERproject数据</code>    --不常用，除非新装环境需要导入smartERproject的master数据时</p>
+<pre><code>sudo -H -u edxapp bash
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+./manage.py cms syncdata --settings=smarterdev
+</code></pre>
+<p><code>编译lms资源（Compile assets manually）</code></p>
+<pre><code>sudo -H -u edxapp bash
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+paver update_assets lms --settings smarterdev
+</code></pre>
+<p><code>编译cms资源（Compile assets manually）</code></p>
+<pre><code>sudo -H -u edxapp bash
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+paver update_assets cms --settings smarterdev
+</code></pre>
+<p><code>i18n国际化</code></p>
+<p><code>执行以下国际化命令需要注意html/css/js等文件必须是edxapp用户的</code></p>
+<p><strong>提取</strong></p>
+<pre><code>sudo -H -u edxapp bash
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+paver i18n_extract
+</code></pre>
+<p><strong>编译</strong></p>
+<pre><code>sudo -H -u edxapp bash
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+paver i18n_fastgenerate
+</code></pre>
+<p><strong>提取 + 编译</strong></p>
+<pre><code>sudo -H -u edxapp bash
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+paver i18n_generate
+</code></pre>
+<p>edX国际化时，使用了Babel包对mako模版进行国际化，具体调用在i18n-tools包的以下文件中
+/edx/app/edxapp/venvs/edxapp/src/i18n-tools</p>
+<p>Babel的配置放在edx-platform/conf/locale/babel_mako.cfg中，只有在这里配置过的mako模版内容才会被收集</p>
+<p>本地化时，将edx-platform/conf/locale/en/LC_MESSAGES下的除(django.po/djangojs.po两个文件)复制到对应的本地化语言包文件夹中，使用paver i18n_fastgenerate命令将合并复制的文件到django.po/djangojs.po两个文件中</p>
+<p>(合并的设置见：edx-platform/conf/locale/config.yaml的generate_merge，<code>如果需要的文件复制不全的话，合并操作会不执行</code>。)</p>
+<h1 id="ceeb24">六、aws服务器</h1>
+<h2 id="17a4b2">目前使用的aws服务器有三台</h2>
+<hr/>
+<ul>
+<li>
+<p>测试服务器：54.169.223.21</p>
+<p>ssh -i ./smarteredu_open_edx.pem ubuntu@54.169.223.21</p>
+</li>
+<li>
+<p>正式服务器：54.254.229.10 (smarteredu.org)</p>
+<p>ssh -i ./smarteredu_open_edx.pem ubuntu@54.254.229.10</p>
+</li>
+<li>
+<p>最新安装的服务器：54.254.164.155 (最新版的Open edX，只有部分smartERproject的功能，没更新完成)</p>
+<p>ssh -i ./smarteredu20151110.pem ubuntu@54.254.164.155</p>
+</li>
+</ul>
+<h2 id="83611a">发布</h2>
+<hr/>
+<p>由于aws服务器上smartERproject的git配置有问题，发布代码目前是手动上传发布的。</p>
+<p>将smartERproject中的edx-platform/common/smartERproject/和themes/两个文件夹打包，并发送到服务器。下面以上传正式服务器为例：</p>
+<pre><code>zip -r smarteredu-package.zip smartERproject themes
+scp -i ./smarteredu_open_edx.pem smarteredu-package.zip ubuntu@54.254.229.10:~
+
+ssh -i ./smarteredu_open_edx.pem ubuntu@54.254.229.10
+
+＃ 解压缩包
+. press_smartERproject
+
+＃ 更新资源
+sudo -H -u edxapp bash
+source /edx/app/edxapp/edxapp_env
+cd /edx/app/edxapp/edx-platform
+paver update_assets lms --settings aws
+
+paver update_assets lms --settings aws
+
+＃ 重启服务
+sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp:
+sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp_worker:
+</code></pre>
+<h1 id="b743b0">七、学习、开发、运维相关链接</h1>
+<h2 id="7ff11c">项目介绍：</h2>
+<p><a href="http://code.edx.org">http://code.edx.org</a></p>
+<p><a href="http://iblstudios.com/wp-content/uploads/2014/08/IBL-Open-edX-Ebook-2014.pdf">http://iblstudios.com/wp-content/uploads/2014/08/IBL-Open-edX-Ebook-2014.pdf</a></p>
+<h3 id="55e8d8">项目页：</h3>
+<p><a href="http://github.com/edx">http://github.com/edx</a></p>
+<p><a href="http://github.com/edx-solutions">http://github.com/edx-solutions</a></p>
+<h3 id="0711e7">官方文档：</h3>
+<p><a href="http://docs.edx.org">http://docs.edx.org</a></p>
+<h3 id="2a3d8c">官方wiki:</h3>
+<p><a href="https://edx-wiki.atlassian.net/wiki/dashboard.action">https://edx-wiki.atlassian.net/wiki/dashboard.action</a></p>
+<h3 id="b79659">安装配置文档：</h3>
+<p><a href="http://edx.readthedocs.org/projects/edx-installing-configuring-and-running/en/latest/">http://edx.readthedocs.org/projects/edx-installing-configuring-and-running/en/latest/</a></p>
+<p><a href="http://www.idefs.com/record-openedx-multinode-installation-attempts.html">http://www.idefs.com/record-openedx-multinode-installation-attempts.html</a></p>
+<p><a href="http://www.idefs.com/reprintedx-ubuntu-12-04-64-bit-installation.html">http://www.idefs.com/reprintedx-ubuntu-12-04-64-bit-installation.html</a></p>
+<p><a href="http://www.idefs.com/record-openedx-sets-the-smtp-send-mail.html">http://www.idefs.com/record-openedx-sets-the-smtp-send-mail.html</a></p>
+<h3 id="29e085">功能试用：</h3>
+<p><strong>官方sandbox:</strong></p>
+<p><a href="https://github.com/edx/edx-platform/wiki/Open-edx-sandbox-website">https://github.com/edx/edx-platform/wiki/Open-edx-sandbox-website</a></p>
+<p><strong>OVA(VMware)镜像：</strong></p>
+<p><a href="http://www.edustack.org/?page_id=8">http://www.edustack.org/?page_id=8</a></p>
+<p><strong>官方制作的vagrant</strong></p>
+<p><a href="https://raw.githubusercontent.com/edx/configuration/master/vagrant/release/devstack/Vagrantfile">https://raw.githubusercontent.com/edx/configuration/master/vagrant/release/devstack/Vagrantfile</a></p>
+<p><strong>Mitx制作：</strong></p>
+<p><a href="https://people.csail.mit.edu/ichuang/edx/">https://people.csail.mit.edu/ichuang/edx/</a></p>
+<h3 id="3e65dd">谁在用Open edX:</h3>
+<p><a href="https://github.com/edx/edx-platform/wiki/Sites-powered-by-Open-edX">https://github.com/edx/edx-platform/wiki/Sites-powered-by-Open-edX</a></p>
+<h3 id="d88e6d">谁能提供Open edX技术服务：</h3>
+<p><a href="https://github.com/edx/edx-platform/wiki/List-of-Open-edX-service-providers">https://github.com/edx/edx-platform/wiki/List-of-Open-edX-service-providers</a></p>
+<h2 id="9d39cd">作为课程制作者：</h2>
+<hr/>
+<p><a href="http://edx.readthedocs.org/projects/edx-partner-course-staff/en/latest/">http://edx.readthedocs.org/projects/edx-partner-course-staff/en/latest/</a></p>
+<p><a href="http://edx-ca-zhtw.readthedocs.org/zh_TW/latest/">http://edx-ca-zhtw.readthedocs.org/zh_TW/latest/</a></p>
+<h2 id="579ad8">作为开发者：</h2>
+<hr/>
+<h3 id="8a7865">开发者文档：</h3>
+<p><a href="http://edx.readthedocs.org/projects/userdocs/en/latest/">http://edx.readthedocs.org/projects/userdocs/en/latest/</a></p>
+<h3 id="43bc24">xblock：</h3>
+<p><a href="http://edx.readthedocs.org/projects/xblock/en/latest/">http://edx.readthedocs.org/projects/xblock/en/latest/</a></p>
+<p><a href="https://antoviaque.org/docs/edx/xblock/tutorial.html">https://antoviaque.org/docs/edx/xblock/tutorial.html</a></p>
+<h2 id="a20855">作为一个贡献者：</h2>
+<hr/>
+<h3 id="668633">1. 签署个人贡献者协议</h3>
+<p><a href="http://code.edx.org/individual-contributor-agreement.pdf">http://code.edx.org/individual-contributor-agreement.pdf</a></p>
+<p>扫描件发送到jennifer@edx.org</p>
+<h3 id="317ac4">2. 确认你的代码符合要求：</h3>
+<p><strong>pep8、pep257等确认质量100%</strong></p>
+<p><a href="https://github.com/edx/edx-platform/wiki/Python-Guidelines">https://github.com/edx/edx-platform/wiki/Python-Guidelines</a></p>
+<p><a href="https://github.com/edx/edx-platform/wiki/i18n-Coding-Guidelines">https://github.com/edx/edx-platform/wiki/i18n-Coding-Guidelines</a></p>
+<p><a href="https://github.com/edx/edx-platform/wiki/Javascript-Guidelines">https://github.com/edx/edx-platform/wiki/Javascript-Guidelines</a></p>
+<p><strong>写好测试，确认覆盖率100%</strong></p>
+<p><a href="http://edx.readthedocs.org/projects/userdocs/en/latest/testing/index.html">http://edx.readthedocs.org/projects/userdocs/en/latest/testing/index.html</a></p>
+<h3 id="d094a4">3. 提交第一个pr</h3>
+<ul>
+<li>提交第一个pr</li>
+<li>更新AUTHORS文件，写入你的github email,和全名</li>
+<li>等待ci测试结果</li>
+</ul>
+<h3 id="b363c5">4. @ 项目所有者review</h3>
+<p><a href="https://github.com/edx/edx-platform/wiki/Code-Ownership">https://github.com/edx/edx-platform/wiki/Code-Ownership</a></p>
+<h2 id="eb0bbd">作为运维：</h2>
+<hr/>
+<h3 id="607a62">一些操作：</h3>
+<p><a href="https://github.com/edx/configuration/wiki/edX-Managing-the-Production-Stack">https://github.com/edx/configuration/wiki/edX-Managing-the-Production-Stack</a></p>
+<h3 id="6934db">一些配置：</h3>
+<p><strong>自己的主题：</strong></p>
+<p><a href="https://github.com/edx/edx-platform/wiki/Stanford-Theming">https://github.com/edx/edx-platform/wiki/Stanford-Theming</a></p>
+<p><strong>自己的登录认证：</strong></p>
+<p><a href="https://github.com/edx/configuration/wiki/Setting-Up-External-Authentication">https://github.com/edx/configuration/wiki/Setting-Up-External-Authentication</a></p>
+<h3 id="c18972">一些命令：</h3>
+<p><a href="https://github.com/edx/edx-platform/wiki/Shell-commands">https://github.com/edx/edx-platform/wiki/Shell-commands</a></p>
+<h3 id="f60729">一些工具：</h3>
+<p><a href="https://github.com/edx/edx-tools/wiki">https://github.com/edx/edx-tools/wiki</a></p>
+<h2 id="42e8af">遇到问题：</h2>
+<hr/>
+<h3 id="cf3baf">openedx-ops:运维相关问题</h3>
+<p><a href="https://groups.google.com/forum/#!forum/openedx-ops">https://groups.google.com/forum/#!forum/openedx-ops</a></p>
+<h3 id="d11bc0">openedx-translation: edx翻译项目</h3>
+<p><a href="https://groups.google.com/forum/#!forum/openedx-translation">https://groups.google.com/forum/#!forum/openedx-translation</a></p>
+<h3 id="e244bf">openedx-analytics:</h3>
+<p><a href="https://groups.google.com/forum/#!forum/openedx-analytics">https://groups.google.com/forum/#!forum/openedx-analytics</a></p>
+<h3 id="fd7d8d">edx-code: edx 功能、代码相关</h3>
+<p><a href="https://groups.google.com/forum/#!forum/edx-code">https://groups.google.com/forum/#!forum/edx-code</a></p>
+    </div>
+    <div id="content-comments">
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="/develop/smartereduzhi-yan-chuan-zhi-mi.html" data-title="SmarterEdu之广传之秘" data-url="http://jackrole.github.io/develop/smartereduzhi-yan-chuan-zhi-mi.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = { short_name: 'smarteredu' };
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end --></div>
+
+</div>
+<div class="niu2-right-container col-md-2">
+    <div id="niu2-sidebar-meta" class="niu2-sidebar">
+        <div class="niu2-sidebar-label"><i class="icon-calendar"></i>发布时间:</div>
+        <div class="niu2-sidebar-value">2016-01-22 00:00</div>
+        <div class="niu2-sidebar-label"><i class="icon-code"></i>分类:</div>
+        <div class="niu2-sidebar-value"><a href="http://jackrole.github.io/develop/index.html">开发</a></div>
+        <div class="niu2-sidebar-label"><i class="icon-tag"></i>标签:</div>
+ 
+            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://jackrole.github.io/tag/edx.html">edx</a><sup>8</sup></div>
+            <div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://jackrole.github.io/tag/smarteredu.html">smarteredu</a><sup>3</sup></div>
+    </div>
+
+    <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+        <div class="niu2-sidebar-label">
+            <i id="niu2-sidebar-toc-ctrl" class="icon-open-tocs"></i>目录
+        </div>
+        <ul id="niu2-sidebar-toc-list">
+            <li><a href="#content-heading">SmarterEdu之广传之秘</a></li>
+            <li><a href='#1510ec'>总则:欲练此功、抱腿度娘、委身谷哥</a></li><li><a href='#684fe5'>一、环境安装</a></li><li><a href='#e9aba2'>二、项目结构</a><ul><li><a href='#0a476b'>各个设置文件之间的关系</a></li><li><a href='#08a4d1'>Open edX固有目录结构</a><ul><li><a href='#9c00fa'>学生模块</a></li><li><a href='#d810fe'>课件模块</a></li><li><a href='#dc0ea6'>课程内容模块</a></li></ul></li><li><a href='#83dbe3'>smartERproject目录结构</a></li></ul></li><li><a href='#1949f8'>三、业务逻辑</a><ul><li><a href='#025c31'>综合说明</a></li><li><a href='#a7ca3f'>主要表的裙带关系</a></li><li><a href='#94419a'>功能点说明</a><ul><li><a href='#af7d54'>appauth</a></li><li><a href='#9efab2'>common</a></li><li><a href='#82df41'>community</a></li><li><a href='#046d47'>course</a></li><li><a href='#955bff'>institution</a></li><li><a href='#8d7883'>teacher</a></li><li><a href='#368535'>keyin</a></li></ul></li><li><a href='#bfbd61'>接口说明</a></li></ul></li><li><a href='#aff8dd'>四、环境配置</a><ul><li><a href='#c5fa74'>lms.env.json</a></li><li><a href='#375c6b'>cms.env.json</a></li><li><a href='#2c1770'>用户注册系统，关于激活邮件的发送</a><ul><li><a href='#92bda0'>邮件激活功能具体设置方法：</a></li></ul></li><li><a href='#5dd4c3'>开启oauth2授权</a></li><li><a href='#0ee8f1'>国际化设置</a></li></ul></li><li><a href='#4f7814'>五、常用命令</a></li><li><a href='#ceeb24'>六、aws服务器</a><ul><li><a href='#17a4b2'>目前使用的aws服务器有三台</a></li><li><a href='#83611a'>发布</a></li></ul></li><li><a href='#b743b0'>七、学习、开发、运维相关链接</a><ul><li><a href='#7ff11c'>项目介绍：</a><ul><li><a href='#55e8d8'>项目页：</a></li><li><a href='#0711e7'>官方文档：</a></li><li><a href='#2a3d8c'>官方wiki:</a></li><li><a href='#b79659'>安装配置文档：</a></li><li><a href='#29e085'>功能试用：</a></li><li><a href='#3e65dd'>谁在用Open edX:</a></li><li><a href='#d88e6d'>谁能提供Open edX技术服务：</a></li></ul></li><li><a href='#9d39cd'>作为课程制作者：</a></li><li><a href='#579ad8'>作为开发者：</a><ul><li><a href='#8a7865'>开发者文档：</a></li><li><a href='#43bc24'>xblock：</a></li></ul></li><li><a href='#a20855'>作为一个贡献者：</a><ul><li><a href='#668633'>1. 签署个人贡献者协议</a></li><li><a href='#317ac4'>2. 确认你的代码符合要求：</a></li><li><a href='#d094a4'>3. 提交第一个pr</a></li><li><a href='#b363c5'>4. @ 项目所有者review</a></li></ul></li><li><a href='#eb0bbd'>作为运维：</a><ul><li><a href='#607a62'>一些操作：</a></li><li><a href='#6934db'>一些配置：</a></li><li><a href='#c18972'>一些命令：</a></li><li><a href='#f60729'>一些工具：</a></li></ul></li><li><a href='#42e8af'>遇到问题：</a><ul><li><a href='#cf3baf'>openedx-ops:运维相关问题</a></li><li><a href='#d11bc0'>openedx-translation: edx翻译项目</a></li><li><a href='#e244bf'>openedx-analytics:</a></li><li><a href='#fd7d8d'>edx-code: edx 功能、代码相关</a></li></ul></li></ul></li>
+            <li><a href="#content-comments">评论</a></li>
+        </ul>
+    </div>
+</div>    </div>
+
+    <div class="niu2-footer">
+        <div id="body-footer" class="col-md-6 col-md-offset-2">
+<hr/>
+<p>
+    Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+    <a href="https://github.com/mawenbao/niu-x2-sidebar">theme</a> built with <a href="http://getbootstrap.com">Bootstrap3</a>
+    by <a href="http://blog.atime.me">Ma Wenbao</a>, icons by 
+    <a href="http://fortawesome.github.io/Font-Awesome">Font Awesome</a>.
+</p>
+<p>
+    ©
+            2015-2016
+    <a class="niu2-footer-link" href="http://jackrole.github.io">jackrole</a>
+</p>
+<p class="niu2-icons">
+</p>        </div>
+    </div>
+    
+    <div id="niu2-pygments" data-theme="github"></div>
+
+    <script type="text/javascript" src="http://jackrole.github.io/theme/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://jackrole.github.io/theme/js/niu2.min.js"></script>
+    <script type="text/javascript" src="http://jackrole.github.io/theme/js/bootstrap.min.js"></script>
+    <script type="text/javascript">onContentLoaded();</script>
+  </body>
+</html>
